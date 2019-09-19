@@ -10,7 +10,12 @@ $blue: #002A69;
 $tan: #DDB3A2;
 $offwhite: #EADDE6;
 $darkblue: #00224B;
+$lightblue: #2c61b0;
 $pink: #FD858D;
+$darkpink: #d47077;
+$lightpink: #fca2a8;
+
+$grey: #59606a;
 
 body {
   background-color: $offwhite;
@@ -67,12 +72,16 @@ p {
   // justify-content: center;
 }
 
-.play-btn, .stop-btn {
+.play-btn {
   margin-top: 1.3em;
   width: 300px;
   border-radius: 5px;
   background-color: $blue;
   color: white;
+}
+
+.play-btn:hover {
+  background-color: lighten($darkblue, 10%);
 }
 
 .stop {
@@ -153,6 +162,44 @@ h1 {
   // border-bottom: 2px;
   // border-style: solid;
   // border-color: $blue;
+}
+
+.custom-range {
+  width: 200px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.range {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.custom-range::-webkit-slider-thumb {
+  background: radial-gradient($lightpink, $darkpink);
+}
+
+.custom-range::-moz-range-thumb {
+  background: radial-gradient($lightpink, $darkpink);
+}
+
+.custom-range::-ms-thumb {
+  background: radial-gradient($lightpink, $darkpink);
+}
+
+.custom-range::-webkit-slider-runnable-track {
+  background: linear-gradient($darkblue, $lightblue);
+}
+
+.custom-range::-moz-range-track {
+  background: linear-gradient($darkblue, $lightblue);
+}
+
+label {
+  color: $darkblue;
 }
 
 // box-shadow: 3px 3px 7px rgba(15,15,15,0.8);

@@ -20,8 +20,11 @@
           </div>
         </nav>
         <div class="nav-left">
+          <div id="Oliver" class="producer-div">
+            <p id="Oliver-text" class="producer selected">Oliver</p>
+          </div>
           <div id="Pascaal" class="producer-div">
-            <p id="Pascaal-text" class="producer selected">Pascaal</p>
+            <p id="Pascaal-text" class="producer">Pascaal</p>
           </div>
           <div id="PointPoint" class="producer-div">
             <p id="PointPoint-text" class="producer">PointPoint</p>
@@ -32,17 +35,17 @@
         </div>
         <main>
           <div class="player">
-            <h1 id="producer-title">Pascaal Samples</h1>
+            <h1 id="producer-title">Oliver Samples</h1>
             <div class="block">
-              <select class="select">
+              <select class="loops select">
                 <option class="option" value="Loop 1">Loop 1</option>
                 <option class="option" value="Loop 2">Loop 2</option>
                 <option class="option" value="Loop 3">Loop 3</option>
               </select>
             </div>
-            <div class="block">
+            <div class="block range">
               <label for="volume">Volume</label>
-              <input type="range" id="volume" name="volume"
+              <input class="custom-range" type="range" id="volume" name="volume"
                      value="0.5" min="0" max="1" step="0.1">
             </div>
             <!-- <div class="block">
@@ -50,9 +53,9 @@
               <input type="range" id="rate" name="rate"
                      value="1" min="0.5" max="2" step="0.1">
             </div> -->
-            <div class="block">
+            <div class="block range">
               <label for="detune">Pitch</label>
-              <input type="range" id="detune" name="detune"
+              <input class="custom-range" type="range" id="detune" name="detune"
                      value="0" min="-300" max="300" step="5">
             </div>
             <div class="block">

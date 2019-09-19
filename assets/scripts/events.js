@@ -1,15 +1,20 @@
 import Wad from 'web-audio-daw'
 
+let loop = 'loop1'
+
 // const state = {
-//   isPlaying: false,
-//   pointLoop: {
-//     volume: 1,
-//     rate: 1,
-//     loop: true
+//   Pascaal: {
+//     loop: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop${loopNumber}.wav`
+//   },
+//   PointPoint: {
+//     loop: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop${loopNumber}.wav`
+//   },
+//   Tennyson: {
+//     loop: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop${loopNumber}.wav`
 //   }
 // }
 
-let producer = 'Pascaal'
+let producer = 'Oliver'
 
 // const onClickProducer = (producerName) => {
 //   producer = producerName
@@ -19,7 +24,7 @@ let producer = 'Pascaal'
 const kits = {
   PointPoint: {
     loop: new Wad(
-      { source: 'https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav',
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
@@ -50,8 +55,20 @@ const kits = {
     )
   },
   Pascaal: {
-    loop: new Wad(
-      { source: 'https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav',
+    loop1: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop2: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop2.wav`,
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop3.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
@@ -111,6 +128,50 @@ const kits = {
     ),
     k: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav` }
+    )
+  },
+  Oliver: {
+    loop1: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop1.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop2: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    d: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav` }
+    ),
+    f: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`
+        // reverb: {
+        //   wet: 0.5,
+        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
+        // }
+        // Reverb slows everything down interfering with sound rendering
+      }
+    ),
+    g: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav` }
+    ),
+    h: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav` }
+    ),
+    j: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav` }
+    ),
+    k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav` }
     )
   }
 }
@@ -200,7 +261,7 @@ const playLoop = () => {
     $('.play-btn').removeClass('play')
     $('.play-btn').addClass('stop')
     Wad.stopAll()
-    kits[producer].loop.play({ loop: true })
+    kits[producer][loop].play({ loop: true })
   } else {
     $('.play-btn').html('Play')
     $('.play-btn').removeClass('stop')
@@ -280,7 +341,7 @@ const onkeyUp = event => {
 }
 
 const onChangeVolume = event => {
-  kits[producer].loop.setVolume(event.target.valueAsNumber)
+  kits[producer][loop].setVolume(event.target.valueAsNumber)
   console.log('event', event.target.valueAsNumber)
 }
 
@@ -290,13 +351,32 @@ const onChangeVolume = event => {
 // }
 
 const onChangeDetune = event => {
-  kits[producer].loop.setDetune(event.target.valueAsNumber)
+  kits[producer][loop].setDetune(event.target.valueAsNumber)
   console.log('event', event.target.valueAsNumber)
+}
+
+const onSelectLoop = event => {
+  switch (event.target.value) {
+    case 'Loop 1': loop = 'loop1'
+      break
+    case 'Loop 2': loop = 'loop2'
+      break
+    case 'Loop 3': loop = 'loop3'
+      break
+  }
 }
 
 const addHandlers = () => {
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
+  $('#Oliver').on('click', () => {
+    producer = 'Oliver'
+    $('#producer-title').html('Oliver Samples')
+    $('#Oliver-text').addClass('selected')
+    $('#Pascaal-text').removeClass('selected')
+    $('#Tennyson-text').removeClass('selected')
+    $('#PointPoint-text').removeClass('selected')
+  })
   $('#Pascaal').on('click', () => {
     producer = 'Pascaal'
     $('#producer-title').html('Pascaal Samples')
@@ -318,6 +398,7 @@ const addHandlers = () => {
   $('#volume').on('change', onChangeVolume)
   // $('#rate').on('change', onChangeRate)
   $('#detune').on('change', onChangeDetune)
+  $('.loops').on('change', onSelectLoop)
   // $(document).keypress(function (e) {
   //   if (e.keyCode === 70) {
   //     alert('f pressed')
