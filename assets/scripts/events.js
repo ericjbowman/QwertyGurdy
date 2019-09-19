@@ -436,6 +436,12 @@ const addHandlers = () => {
   $('#volume').on('change', onChangeVolume)
   $('#detune').on('change', onChangeDetune)
   $('.loops').on('change', onSelectLoop)
+  $('#68').on('click', () => kits[producer].d.play())
+  $('#70').on('click', () => kits[producer].f.play())
+  $('#71').on('click', () => kits[producer].g.play())
+  $('#72').on('click', () => kits[producer].h.play())
+  $('#74').on('click', () => kits[producer].j.play())
+  $('#75').on('click', () => kits[producer].k.play())
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
 }
