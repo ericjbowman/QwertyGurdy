@@ -23,17 +23,31 @@ let producer = 'Oliver'
 
 const kits = {
   PointPoint: {
-    loop: new Wad(
+    loop1: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
       }),
+    loop2: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop2.wav`,
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop3.wav`,
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
+        volume: 0.5 }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
+        volume: 0.5
         // reverb: {
         //   wet: 0.5,
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
@@ -42,16 +56,20 @@ const kits = {
       }
     ),
     g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
+        volume: 0.5 }
     ),
     h: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
+        volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
+        volume: 0.5 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
+        volume: 0.5 }
     )
   },
   Pascaal: {
@@ -74,10 +92,12 @@ const kits = {
         rate: 1
       }),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
+        volume: 0.5 }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
+        volume: 0.5
         // reverb: {
         //   wet: 0.5,
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
@@ -86,30 +106,48 @@ const kits = {
       }
     ),
     g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
+        volume: 0.5 }
     ),
     h: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
+        volume: 0.5 }
     ),
     j: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc1.wav` }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
+        volume: 0.5
+      }
     )
   },
   Tennyson: {
-    loop: new Wad(
+    loop1: new Wad(
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop1.wav',
         loop: true,
         volume: 0.5,
         rate: 1
       }),
+    loop2: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop2.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop3.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
+        volume: 0.5 }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
+        volume: 0.5
         // reverb: {
         //   wet: 0.5,
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
@@ -118,16 +156,20 @@ const kits = {
       }
     ),
     g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
+        volume: 0.5 }
     ),
     h: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
+        volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
+        volume: 0.5 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
+        volume: 0.5 }
     )
   },
   Oliver: {
@@ -150,10 +192,12 @@ const kits = {
         rate: 1
       }),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
+        volume: 0.5 }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
+        volume: 0.5
         // reverb: {
         //   wet: 0.5,
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
@@ -162,16 +206,20 @@ const kits = {
       }
     ),
     g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
+        volume: 0.5 }
     ),
     h: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
+        volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
+        volume: 0.5 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
+        volume: 0.5 }
     )
   }
 }
@@ -366,44 +414,27 @@ const onSelectLoop = event => {
   }
 }
 
+const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
+
+const onClickProducer = (producer) => {
+  const dormantProducers = producers.filter(x => x !== producer)
+  dormantProducers.forEach(dormantProducer => {
+    $(`#${dormantProducer}-text`).removeClass('selected')
+  })
+  $('#producer-title').html(`${producer} Samples`)
+  $(`#${producer}-text`).addClass('selected')
+}
+
 const addHandlers = () => {
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
-  $('#Oliver').on('click', () => {
-    producer = 'Oliver'
-    $('#producer-title').html('Oliver Samples')
-    $('#Oliver-text').addClass('selected')
-    $('#Pascaal-text').removeClass('selected')
-    $('#Tennyson-text').removeClass('selected')
-    $('#PointPoint-text').removeClass('selected')
-  })
-  $('#Pascaal').on('click', () => {
-    producer = 'Pascaal'
-    $('#producer-title').html('Pascaal Samples')
-    $('#Pascaal-text').addClass('selected')
-    $('#PointPoint-text').removeClass('selected')
-  })
-  $('#PointPoint').on('click', () => {
-    producer = 'PointPoint'
-    $('#producer-title').html('Point Point Samples')
-    $('#PointPoint-text').addClass('selected')
-    $('#Pascaal-text').removeClass('selected')
-  })
-  $('#Tennyson').on('click', () => {
-    producer = 'Tennyson'
-    $('#producer-title').html('Tennyson Samples')
-    $('#Tennyson-text').addClass('selected')
-    $('#Pascaal-text').removeClass('selected')
-  })
+  $('#Oliver').on('click', () => onClickProducer('Oliver'))
+  $('#Pascaal').on('click', () => onClickProducer('Pascaal'))
+  $('#PointPoint').on('click', () => onClickProducer('PointPoint'))
+  $('#Tennyson').on('click', () => onClickProducer('Tennyson'))
   $('#volume').on('change', onChangeVolume)
-  // $('#rate').on('change', onChangeRate)
   $('#detune').on('change', onChangeDetune)
   $('.loops').on('change', onSelectLoop)
-  // $(document).keypress(function (e) {
-  //   if (e.keyCode === 70) {
-  //     alert('f pressed')
-  //   }
-  // })
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
 }
