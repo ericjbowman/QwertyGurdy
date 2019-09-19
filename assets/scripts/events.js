@@ -205,7 +205,7 @@ const playLoop = () => {
     $('.play-btn').html('Play')
     $('.play-btn').removeClass('stop')
     $('.play-btn').addClass('play')
-    kits[producer].loop.stop()
+    Wad.stopAll()
   }
 }
 
