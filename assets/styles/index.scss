@@ -1,1 +1,157 @@
 @import '~bootstrap/scss/bootstrap';
+
+$lightgreen: #6DD9BF;
+$darkgreen: #50A18E;
+$yellow: #F2D680;
+$orange: #F2916D;
+$red: #F26E50;
+
+$blue: #002A69;
+$tan: #DDB3A2;
+$offwhite: #EADDE6;
+$darkblue: #00224B;
+$pink: #FD858D;
+
+body {
+  background-color: $offwhite;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: belgrano, serif;
+}
+
+nav {
+  height: 5em;
+  background-color: $blue;
+}
+
+main {
+  margin-left: 250px;
+}
+
+p {
+  margin: 0;
+}
+
+.nav-title {
+  font-family: megrim, fantasy;
+  color: white;
+}
+
+.nav-left {
+  width: 250px;
+  height: 100vh;
+  background-color: $tan;
+  position: fixed;
+  z-index: 1;
+}
+
+.producer {
+  padding: 2em;
+  color: $darkblue;
+  font-weight: bold;
+  text-align: center;
+}
+
+.select {
+  margin: 0 0 1.5em;
+  height: 2em;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.player {
+  margin: 2em;
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+}
+
+.play-btn, .stop-btn {
+  margin-top: 1.3em;
+  width: 300px;
+  border-radius: 5px;
+  background-color: $blue;
+  color: white;
+}
+
+.stop {
+  background-color: $pink;
+}
+
+.block {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slider-container {
+  // background-color: green;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.slider-label {
+  display: inline;
+  width: 100px;
+}
+
+input {
+  width: 200px;
+}
+
+.key {
+  width: 100px;
+  height: auto;
+  margin: 5px;
+}
+
+.key:hover, .key-pressed {
+  cursor: pointer;
+  filter: brightness(1.5);
+    -webkit-filter: brightness(1.5);
+}
+
+.key-container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.key-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 22px;
+  position: absolute;
+  z-index: 2;
+}
+
+.producer-div {
+  background-color: $tan;
+  transition: .5s;
+}
+.producer-div:hover {
+  background-color: $pink;
+}
+
+h1 {
+  text-align: center;
+  color: $darkblue;
+  margin-bottom: 0.7em;
+}
+
+.selected {
+  text-decoration: underline;
+  // background-color: $pink;
+  // border-bottom: 2px;
+  // border-style: solid;
+  // border-color: $blue;
+}
+
+// box-shadow: 3px 3px 7px rgba(15,15,15,0.8);
