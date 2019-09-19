@@ -416,13 +416,14 @@ const onSelectLoop = event => {
 
 const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
 
-const onClickProducer = (producer) => {
-  const dormantProducers = producers.filter(x => x !== producer)
+const onClickProducer = (selectedProducer) => {
+  producer = selectedProducer
+  const dormantProducers = producers.filter(x => x !== selectedProducer)
   dormantProducers.forEach(dormantProducer => {
     $(`#${dormantProducer}-text`).removeClass('selected')
   })
-  $('#producer-title').html(`${producer} Samples`)
-  $(`#${producer}-text`).addClass('selected')
+  $('#producer-title').html(`${selectedProducer} Samples`)
+  $(`#${selectedProducer}-text`).addClass('selected')
 }
 
 const addHandlers = () => {
