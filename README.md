@@ -1,4 +1,4 @@
-#SampleJam
+# SampleJam
 
 SampleJam is a web application that allows the user to choose from
 several producers (Oliver, Pascaal, Point Point, and Tennyson), play
@@ -16,9 +16,9 @@ Samples were purchased at:
 
 Other tools used:
 
-*javaScript
-*HTML5
-*CSS3
-*Bootstrap
-*Sass
-*Photoshop
+*   javaScript
+*   HTML5
+*   CSS3
+*   Bootstrap
+*   Sass
+*   Photoshop
