@@ -67,7 +67,7 @@ p {
 }
 
 .player {
-  margin: 2em;
+  margin: 2em 0;
   width: 100%;
   // display: flex;
   // justify-content: center;
@@ -129,8 +129,8 @@ input {
   margin-top: 2em;
   display: flex;
   justify-content: center;
-  filter: hue-rotate(110deg);
-    -webkit-filter: hue-rotate(110deg);
+  filter: hue-rotate(120deg);
+    -webkit-filter: hue-rotate(120deg);
 }
 
 .key-div {
