@@ -15,6 +15,7 @@ let loop = 'loop1'
 // }
 
 let producer = 'Oliver'
+const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
 
 // const onClickProducer = (producerName) => {
 //   producer = producerName
@@ -390,6 +391,10 @@ const onkeyUp = event => {
 
 const onChangeVolume = event => {
   kits[producer][loop].setVolume(event.target.valueAsNumber)
+  producers.forEach(x => {
+    kits[x][loop].volume = (event.target.valueAsNumber)
+    alert(kits[x][loop].volume)
+  })
   console.log('event', event.target.valueAsNumber)
 }
 
@@ -400,6 +405,9 @@ const onChangeVolume = event => {
 
 const onChangeDetune = event => {
   kits[producer][loop].setDetune(event.target.valueAsNumber)
+  producers.forEach(x => {
+    kits[x][loop].detune = (event.target.valueAsNumber)
+  })
   console.log('event', event.target.valueAsNumber)
 }
 
@@ -413,8 +421,6 @@ const onSelectLoop = event => {
       break
   }
 }
-
-const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
 
 const onClickProducer = (selectedProducer) => {
   producer = selectedProducer

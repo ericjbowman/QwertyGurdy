@@ -18,7 +18,9 @@ $lightpink: #fca2a8;
 $grey: #59606a;
 
 body {
-  background-color: $offwhite;
+  background-image: url('public/Wall.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -26,12 +28,17 @@ body {
 }
 
 nav {
+  overflow: hidden;
   height: 5em;
   background-color: $blue;
+  position: fixed;
+  top: 0;
 }
 
 main {
+  background-color: rgba(234, 221, 230, 0.7);
   margin-left: 250px;
+  height: 100vh;
 }
 
 p {
@@ -48,6 +55,7 @@ p {
   height: 100vh;
   background-color: $tan;
   position: fixed;
+  // top: 80px;
   z-index: 3;
 }
 
@@ -67,7 +75,7 @@ p {
 }
 
 .player {
-  margin: 2em 0;
+  padding: 2em 0;
   width: 100%;
   // display: flex;
   // justify-content: center;
@@ -79,6 +87,8 @@ p {
   border-radius: 5px;
   background-color: $blue;
   color: white;
+  // box-shadow: 2px 2px 10px grey;
+
 }
 
 .play-btn:hover {
