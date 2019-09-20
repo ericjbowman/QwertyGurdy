@@ -2,25 +2,12 @@ import Wad from 'web-audio-daw'
 
 let loop = 'loop1'
 
-// const state = {
-//   Pascaal: {
-//     loop: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop${loopNumber}.wav`
-//   },
-//   PointPoint: {
-//     loop: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop${loopNumber}.wav`
-//   },
-//   Tennyson: {
-//     loop: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop${loopNumber}.wav`
-//   }
-// }
+const state = {
+  volume: 0.5
+}
 
 let producer = 'Oliver'
 const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
-
-// const onClickProducer = (producerName) => {
-//   producer = producerName
-//   alert(producer)
-// }
 
 const kits = {
   PointPoint: {
@@ -310,7 +297,10 @@ const playLoop = () => {
     $('.play-btn').removeClass('play')
     $('.play-btn').addClass('stop')
     Wad.stopAll()
-    kits[producer][loop].play({ loop: true })
+    kits[producer][loop].play(
+      { loop: true,
+        volume: state.volume
+      })
   } else {
     $('.play-btn').html('Play')
     $('.play-btn').removeClass('stop')
@@ -391,9 +381,9 @@ const onkeyUp = event => {
 
 const onChangeVolume = event => {
   kits[producer][loop].setVolume(event.target.valueAsNumber)
+  state.volume = event.target.valueAsNumber
   producers.forEach(x => {
     kits[x][loop].volume = (event.target.valueAsNumber)
-    alert(kits[x][loop].volume)
   })
   console.log('event', event.target.valueAsNumber)
 }
