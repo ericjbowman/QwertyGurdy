@@ -29,11 +29,11 @@ const kits = {
         volume: 0.5,
         rate: 1
       }),
-    d: new Wad(
+    s: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
         volume: 0.5 }
     ),
-    f: new Wad(
+    d: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
         volume: 0.5
         // reverb: {
@@ -43,21 +43,21 @@ const kits = {
         // Reverb slows everything down interfering with sound rendering
       }
     ),
-    g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
-        volume: 0.5 }
-    ),
-    h: new Wad(
+    f: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
+        volume: 0.3 }
+    ),
+    k: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
         volume: 0.5 }
     ),
-    k: new Wad(
+    l: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
-        volume: 0.5 }
+        volume: 0.3 }
     )
   },
   Pascaal: {
@@ -79,11 +79,11 @@ const kits = {
         volume: 0.5,
         rate: 1
       }),
-    d: new Wad(
+    s: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
         volume: 0.5 }
     ),
-    f: new Wad(
+    d: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
         volume: 0.5
         // reverb: {
@@ -93,20 +93,20 @@ const kits = {
         // Reverb slows everything down interfering with sound rendering
       }
     ),
-    g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
-        volume: 0.5 }
-    ),
-    h: new Wad(
+    f: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
+        volume: 0.3 }
     ),
     k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc1.wav` }
+    ),
+    l: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
-        volume: 0.5
+        volume: 0.3
       }
     )
   },
@@ -129,11 +129,11 @@ const kits = {
         volume: 0.5,
         rate: 1
       }),
-    d: new Wad(
+    s: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
         volume: 0.5 }
     ),
-    f: new Wad(
+    d: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
         volume: 0.5
         // reverb: {
@@ -143,19 +143,19 @@ const kits = {
         // Reverb slows everything down interfering with sound rendering
       }
     ),
-    g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
-        volume: 0.5 }
-    ),
-    h: new Wad(
+    f: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
-        volume: 0.5 }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
+        volume: 0.3 }
     ),
     k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
+        volume: 0.3 }
+    ),
+    l: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
         volume: 0.5 }
     )
@@ -179,11 +179,11 @@ const kits = {
         volume: 0.5,
         rate: 1
       }),
-    d: new Wad(
+    s: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
         volume: 0.5 }
     ),
-    f: new Wad(
+    d: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
         volume: 0.5
         // reverb: {
@@ -193,19 +193,19 @@ const kits = {
         // Reverb slows everything down interfering with sound rendering
       }
     ),
-    g: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
-        volume: 0.5 }
-    ),
-    h: new Wad(
+    f: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
         volume: 0.5 }
     ),
     k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
+        volume: 0.5 }
+    ),
+    l: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
         volume: 0.5 }
     )
@@ -360,17 +360,17 @@ const stop = () => {
 const onkeyDown = event => {
   $(`#${event.keyCode}`).addClass('key-pressed')
   switch (event.keyCode) {
+    case 83 : kits[producer].s.play()
+      break
     case 68 : kits[producer].d.play()
       break
     case 70 : kits[producer].f.play()
       break
-    case 71 : kits[producer].g.play()
-      break
-    case 72 : kits[producer].h.play()
-      break
     case 74 : kits[producer].j.play()
       break
     case 75 : kits[producer].k.play()
+      break
+    case 76 : kits[producer].l.play()
       break
   }
 }
@@ -432,12 +432,12 @@ const addHandlers = () => {
   $('#volume').on('change', onChangeVolume)
   $('#detune').on('change', onChangeDetune)
   $('.loops').on('change', onSelectLoop)
-  $('#68').on('click', () => kits[producer].d.play())
-  $('#70').on('click', () => kits[producer].f.play())
-  $('#71').on('click', () => kits[producer].g.play())
-  $('#72').on('click', () => kits[producer].h.play())
-  $('#74').on('click', () => kits[producer].j.play())
-  $('#75').on('click', () => kits[producer].k.play())
+  $('#s').on('click', () => kits[producer].s.play())
+  $('#d').on('click', () => kits[producer].d.play())
+  $('#f').on('click', () => kits[producer].f.play())
+  $('#j').on('click', () => kits[producer].j.play())
+  $('#k').on('click', () => kits[producer].k.play())
+  $('#l').on('click', () => kits[producer].l.play())
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
 }
