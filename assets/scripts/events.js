@@ -1,13 +1,19 @@
 import Wad from 'web-audio-daw'
+const config = require('./config.js')
+const store = require('./store.js')
+const api = require('./api.js')
+const indexUploads = require('./templates/index-uploads.handlebars')
 
 let loop = 'loop1'
 
 const state = {
-  volume: 0.5
+  volume: 0.5,
+  url: '',
+  detune: 0
 }
 
 let producer = 'Oliver'
-const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson']
+const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson', 'Custom']
 
 const kits = {
   PointPoint: {
@@ -209,6 +215,56 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
         volume: 0.5 }
     )
+  },
+  Custom: {
+    loop1: new Wad(
+      { source: state.url,
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop2: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    s: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
+        volume: 0.5 }
+    ),
+    d: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
+        volume: 0.5
+        // reverb: {
+        //   wet: 0.5,
+        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
+        // }
+        // Reverb slows everything down interfering with sound rendering
+      }
+    ),
+    f: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
+        volume: 0.5 }
+    ),
+    j: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
+        volume: 0.5 }
+    ),
+    k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
+        volume: 0.5 }
+    ),
+    l: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
+        volume: 0.5 }
+    )
   }
 }
 
@@ -291,16 +347,30 @@ const kits = {
 //   rate: 1
 // }
 // const saw = new Wad({ ...this.state.saw, source: 'sawtooth' })
+let customLoop
+
 const playLoop = () => {
+  if (producer === 'Custom' && $('.play-btn').hasClass('play')) {
+    customLoop = new Wad(
+      { source: state.url,
+        loop: true,
+        volume: state.volume,
+        detune: state.detune
+      }
+    )
+    customLoop.play({ loop: true })
+  }
   if ($('.play-btn').hasClass('play')) {
     $('.play-btn').html('Stop')
     $('.play-btn').removeClass('play')
     $('.play-btn').addClass('stop')
-    Wad.stopAll()
-    kits[producer][loop].play(
-      { loop: true,
-        volume: state.volume
-      })
+    if (producer !== 'Custom') {
+      Wad.stopAll()
+      kits[producer][loop].play(
+        { loop: true,
+          volume: state.volume
+        })
+    }
   } else {
     $('.play-btn').html('Play')
     $('.play-btn').removeClass('stop')
@@ -380,6 +450,7 @@ const onkeyUp = event => {
 }
 
 const onChangeVolume = event => {
+  customLoop.setVolume(event.target.valueAsNumber)
   kits[producer][loop].setVolume(event.target.valueAsNumber)
   state.volume = event.target.valueAsNumber
   producers.forEach(x => {
@@ -394,11 +465,16 @@ const onChangeVolume = event => {
 // }
 
 const onChangeDetune = event => {
-  kits[producer][loop].setDetune(event.target.valueAsNumber)
+  state.detune = event.target.valueAsNumber
   producers.forEach(x => {
     kits[x][loop].detune = (event.target.valueAsNumber)
   })
-  console.log('event', event.target.valueAsNumber)
+  if (producer !== 'Custom') {
+    kits[producer][loop].setDetune(event.target.valueAsNumber)
+    console.log('event', event.target.valueAsNumber)
+  } else {
+    customLoop.setDetune(event.target.valueAsNumber)
+  }
 }
 
 const onSelectLoop = event => {
@@ -412,6 +488,11 @@ const onSelectLoop = event => {
   }
 }
 
+const onSelectCustomLoop = event => {
+  state.url = event.target.value
+  console.log('event.target.value', event.target.value)
+}
+
 const onClickProducer = (selectedProducer) => {
   producer = selectedProducer
   const dormantProducers = producers.filter(x => x !== selectedProducer)
@@ -420,24 +501,97 @@ const onClickProducer = (selectedProducer) => {
   })
   $('#producer-title').html(`${selectedProducer} Samples`)
   $(`#${selectedProducer}-text`).addClass('selected')
+  if (selectedProducer === 'Custom') {
+    $('#presets').hide()
+    $('#handlebar-uploads').show()
+  } else {
+    $('#handlebar-uploads').hide()
+    $('#presets').show()
+  }
+}
+
+// const soundUpload = formData => {
+//   return $.ajax({
+//     method: 'POST',
+//     url: config.apiUrl + '/sounds',
+//     contentType: false, // you use this because StackOverFlow. but basically you just don't want jQuery to interfere, because we've already set the content type
+//     processData: false, // same here
+//     data: formData, // then we can just send it as is because it's already formatted
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+
+const indexAndShowUploads = () => {
+  api.indexUploads()
+    .then((responseData) => {
+      $('#handlebar-uploads').html(indexUploads({ uploads: responseData.uploads.reverse() }))
+      return responseData
+    })
+    .then((responseData) => {
+      store.uploads = responseData.uploads
+      return responseData
+    })
+    .then(() => { state.url = store.uploads[0].url })
+    .then(() => {
+      customLoop = new Wad(
+        { source: state.url,
+          loop: true,
+          volume: state.volume,
+          detune: state.detune
+        }
+      )
+    })
+    .catch(console.log)
 }
 
 const addHandlers = () => {
+  indexAndShowUploads()
+  $('#handlebar-uploads').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
   $('#Oliver').on('click', () => onClickProducer('Oliver'))
   $('#Pascaal').on('click', () => onClickProducer('Pascaal'))
   $('#PointPoint').on('click', () => onClickProducer('PointPoint'))
   $('#Tennyson').on('click', () => onClickProducer('Tennyson'))
+  $('#Custom').on('click', () => onClickProducer('Custom'))
   $('#volume').on('change', onChangeVolume)
   $('#detune').on('change', onChangeDetune)
   $('.loops').on('change', onSelectLoop)
+  $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
   $('#s').on('click', () => kits[producer].s.play())
   $('#d').on('click', () => kits[producer].d.play())
   $('#f').on('click', () => kits[producer].f.play())
   $('#j').on('click', () => kits[producer].j.play())
   $('#k').on('click', () => kits[producer].k.play())
   $('#l').on('click', () => kits[producer].l.play())
+  $('#sound-uploader').on('submit', event => {
+    event.preventDefault()
+    // const file = $('#test-file').prop('files')[0]
+    // console.log(file)
+    // const formData = {
+    //   file
+    // }
+    const formData = new FormData(event.target)
+    console.log('formData', formData)
+
+    $.ajax({
+      method: 'POST',
+      url: config.apiUrl + '/uploads',
+      data: formData,
+      contentType: false,
+      processData: false
+    })
+      // .then(console.log)
+      // .then(apiResponse => {
+      //   $('#sound-display').html(`<audio controls src=${apiResponse.upload.url}></audio>`)
+      // })
+      .then(console.log)
+      .then(indexAndShowUploads)
+      .then(() => onClickProducer('Custom'))
+      .catch(() => alert('failure'))
+  })
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
 }

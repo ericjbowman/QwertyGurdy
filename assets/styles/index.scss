@@ -67,11 +67,45 @@ p {
   text-align: center;
 }
 
-.select {
+.select, #sound-uploader, .input  {
   margin: 0 0 1.5em;
-  height: 2em;
+  height: 2.5em;
   width: 300px;
   border-radius: 5px;
+}
+
+.file-upload {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.file-upload + label {
+    color: white;
+    background-color: $blue;
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding-top: 7px;
+}
+
+.file-upload:focus + label,
+.file-upload + label:hover {
+    background-color: lighten($darkblue, 15%);
+    cursor: pointer;
+}
+
+.upload-label {
+  text-align: center;
+  height: 2.5em;
+  width: 300px;
+}
+
+#sound-uploader, .input {
+  margin: 0;
 }
 
 .player {
@@ -81,18 +115,24 @@ p {
   // justify-content: center;
 }
 
-.play-btn {
+.play-btn, .submit-btn {
   margin-top: 1.3em;
   width: 300px;
+  height: 2.5em;
   border-radius: 5px;
   background-color: $blue;
   color: white;
+  transition: 0.3s;
   // box-shadow: 2px 2px 10px grey;
 
 }
 
-.play-btn:hover {
-  background-color: lighten($darkblue, 10%);
+.submit-btn {
+  margin: 0.5em 0;
+}
+
+.play-btn:hover, .submit-btn:hover {
+  background-color: lighten($darkblue, 15%);
 }
 
 .stop {
@@ -104,6 +144,10 @@ p {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.upload-div {
+  padding-top: 2em;
 }
 
 .slider-container {
