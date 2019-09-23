@@ -18,35 +18,35 @@ const state = {
   l: ''
 }
 
-let producer = 'Oliver'
-const producers = ['Oliver', 'Pascaal', 'PointPoint', 'Tennyson', 'Custom']
+let producer = 'MrBill'
+const producers = ['MrBill', 'Oliver', 'Pascaal', 'PointPoint', 'Tennyson', 'Custom']
 
 const kits = {
-  PointPoint: {
+  MrBill: {
     loop1: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop1.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
       }),
     loop2: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop2.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop2.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
       }),
     loop3: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop3.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop3.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
       }),
     s: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
         volume: 0.5 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillTom1.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -56,22 +56,72 @@ const kits = {
       }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare4.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
-        volume: 0.3 }
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillHat1.wav`,
+        volume: 0.4 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc1.wav`,
         volume: 0.5 }
     ),
     l: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
-        volume: 0.3 }
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare3.wav`,
+        volume: 0.4 }
     )
   },
+  // PointPoint: {
+  //   loop1: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
+  //       loop: true,
+  //       volume: 0.5,
+  //       rate: 1
+  //     }),
+  //   loop2: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop2.wav`,
+  //       loop: true,
+  //       volume: 0.5,
+  //       rate: 1
+  //     }),
+  //   loop3: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop3.wav`,
+  //       loop: true,
+  //       volume: 0.5,
+  //       rate: 1
+  //     }),
+  //   s: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
+  //       volume: 0.5 }
+  //   ),
+  //   d: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
+  //       volume: 0.5
+  //       // reverb: {
+  //       //   wet: 0.5,
+  //       //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
+  //       // }
+  //       // Reverb slows everything down interfering with sound rendering
+  //     }
+  //   ),
+  //   f: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
+  //       volume: 0.5 }
+  //   ),
+  //   j: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
+  //       volume: 0.3 }
+  //   ),
+  //   k: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
+  //       volume: 0.5 }
+  //   ),
+  //   l: new Wad(
+  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
+  //       volume: 0.3 }
+  //   )
+  // },
   Pascaal: {
     loop1: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
@@ -557,6 +607,7 @@ const addHandlers = () => {
   $('#handlebar-uploads').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
+  $('#MrBill').on('click', () => onClickProducer('MrBill'))
   $('#Oliver').on('click', () => onClickProducer('Oliver'))
   $('#Pascaal').on('click', () => onClickProducer('Pascaal'))
   $('#PointPoint').on('click', () => onClickProducer('PointPoint'))
