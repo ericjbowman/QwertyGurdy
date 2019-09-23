@@ -12,6 +12,9 @@ const store = require('./store.js')
 // require('./example')
 
 $(() => {
+  api.indexExamples()
+    .then(() => console.log('example index success'))
+    .catch(() => console.log('example index failed'))
   api.indexUploads()
     .then((responseData) => {
       $('#handlebar-uploads').html(indexUploads({ uploads: responseData.uploads.reverse() }))

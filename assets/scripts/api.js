@@ -10,6 +10,14 @@ const indexUploads = () => {
   })
 }
 
+const indexExamples = () => {
+  return $.ajax({
+    url: config.apiUrl + '/examples',
+    method: 'GET'
+  })
+}
+
 module.exports = {
-  indexUploads
+  indexUploads,
+  indexExamples
 }
