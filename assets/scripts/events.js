@@ -9,7 +9,13 @@ let loop = 'loop1'
 const state = {
   volume: 0.5,
   url: '',
-  detune: 0
+  detune: 0,
+  s: '',
+  d: '',
+  f: '',
+  j: '',
+  k: '',
+  l: ''
 }
 
 let producer = 'Oliver'
@@ -574,7 +580,15 @@ const addHandlers = () => {
     //   file
     // }
     const formData = new FormData(event.target)
+    console.log('event target isLoop', event.target.value)
     console.log('formData', formData)
+
+    // let type = ''
+    // if ($('#is-loop').prop('checked', true)) {
+    //   type = 'loop'
+    // } else if ($('#not-loop').prop('checked', true)) {
+    //   type = 'not loop'
+    // }
 
     $.ajax({
       method: 'POST',

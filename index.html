@@ -13,7 +13,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div>
+      <!-- <div> -->
         <nav class="navbar">
           <div class="nav-content">
             <h1 class="nav-title">Sample Jam</h1>
@@ -139,9 +139,11 @@
             </div>
             <div class="upload-div block">
               <form enctype="multipart/form-data" id="sound-uploader">
-                <input id="file" name="file" type="file" class="file-upload"/>
+                <input id="file" name="file" type="file" class="file-upload input-width"/>
                 <label for="file" class="upload-label">Upload Loop</label>
-                <input name="title" placeholder="Sample Name" class="input" type="text"/>
+                <input name="title" placeholder="Sample Name" class="input input-width" type="text"/>
+                <!-- <input id="is-loop" type="radio" value="isLoop" class="radio">Loop</input>
+                <input id="not-loop" type="radio" value="notLoop" class="radio">Not Loop</input> -->
                 <input type="submit" class="submit-btn"/>
               </form>
             </div>
@@ -151,6 +153,6 @@
             </div>
           </div>
         </main>
-      </div>
+      <!-- </div> -->
     </body>
 </html>
