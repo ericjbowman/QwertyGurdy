@@ -143,7 +143,7 @@ const kits = {
       }),
     s: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
-        volume: 0.5 }
+        volume: 0.6 }
     ),
     d: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
@@ -603,7 +603,13 @@ const indexAndShowUploads = () => {
 }
 
 const addHandlers = () => {
+  const httpRequest = new XMLHttpRequest()
+  httpRequest.open('GET', 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav')
+  httpRequest.addEventListener('load', e => $('.loader').hide())
+  httpRequest.send()
+
   indexAndShowUploads()
+
   $('#handlebar-uploads').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
@@ -625,6 +631,7 @@ const addHandlers = () => {
   $('#l').on('click', () => kits[producer].l.play())
   $('#sound-uploader').on('submit', event => {
     event.preventDefault()
+    $('.loader').show()
     // const file = $('#test-file').prop('files')[0]
     // console.log(file)
     // const formData = {
@@ -655,6 +662,7 @@ const addHandlers = () => {
       .then(console.log)
       .then(indexAndShowUploads)
       .then(() => onClickProducer('Custom'))
+      .then(() => $('.loader').hide())
       .catch(() => alert('failure'))
   })
   window.addEventListener('keydown', onkeyDown)

@@ -273,6 +273,56 @@ label {
   width: 300px;
 }
 
+.loader {
+  position: relative;
+  filter: hue-rotate(-120deg);
+    -webkit-filter: hue-rotate(-120deg);
+  // margin-top: 8.5em;
+  // padding-bottom: 5em;
+}
+
+.outer,
+.middle,
+.inner {
+  border: 3px solid transparent;
+  border-top-color: $blue;
+  border-right-color: $blue;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.outer {
+  width: 3.5em;
+  height: 3.5em;
+  margin-left: -1.75em;
+  margin-top: -1.75em;
+  animation: spin 2s linear infinite;
+}
+
+.middle {
+  width: 2.1em;
+  height: 2.1em;
+  margin-left: -1.05em;
+  margin-top: -1.05em;
+  animation: spin 1.75s linear reverse infinite;
+}
+
+.inner {
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: -0.4em;
+  margin-top: -0.4em;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .nav-left {
     width: 140px;
