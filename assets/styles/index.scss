@@ -19,8 +19,10 @@ $grey: #59606a;
 
 body {
   background-image: url('public/Wall.jpg');
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  margin: 0;
   font-family: sans-serif;
   margin: 0;
   padding: 0;
@@ -39,7 +41,7 @@ nav {
 main {
   background-color: rgba(234, 221, 230, 0.7);
   margin-left: 250px;
-  height: 100vh;
+  height: 650px;
 }
 
 p {
@@ -53,7 +55,7 @@ p {
 
 .nav-left {
   width: 250px;
-  height: 100vh;
+  height: 650px;
   background-color: $tan;
   position: absolute;
   // top: 80px;
@@ -110,7 +112,7 @@ p {
 }
 
 .player {
-  padding: 2em 0;
+  padding: 2em 0 0;
   width: 100%;
   // display: flex;
   // justify-content: center;
@@ -211,7 +213,7 @@ p {
   background-color: $pink;
 }
 
-h1 {
+#producer-title {
   text-align: center;
   color: $darkblue;
   margin-bottom: 0.7em;
@@ -388,6 +390,14 @@ label {
 
   .key-row {
     display: block;
+  }
+
+  .upload-div {
+    width: 200px;
+  }
+
+  .input-width, .upload-label, .submit-btn, #sound-uploader {
+    width: 200px;
   }
 }
 
