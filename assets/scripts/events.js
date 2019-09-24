@@ -19,7 +19,7 @@ const state = {
 }
 
 let producer = 'MrBill'
-const producers = ['MrBill', 'Oliver', 'Pascaal', 'PointPoint', 'Tennyson', 'Custom']
+const producers = ['MrBill', 'Oliver', 'Pascaal', 'Tennyson', 'Custom']
 
 const kits = {
   MrBill: {
