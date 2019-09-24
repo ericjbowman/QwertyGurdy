@@ -46,7 +46,7 @@ const kits = {
         volume: 0.5 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillTom1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -146,7 +146,7 @@ const kits = {
         volume: 0.6 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -156,7 +156,7 @@ const kits = {
       }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
@@ -196,7 +196,7 @@ const kits = {
         volume: 0.5 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -206,7 +206,7 @@ const kits = {
       }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
@@ -246,7 +246,7 @@ const kits = {
         volume: 0.5 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -256,7 +256,7 @@ const kits = {
       }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
@@ -264,7 +264,7 @@ const kits = {
         volume: 0.5 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat2.wav`,
         volume: 0.5 }
     ),
     l: new Wad(
@@ -292,11 +292,11 @@ const kits = {
         rate: 1
       }),
     s: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
         volume: 0.5 }
     ),
     d: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
         volume: 0.5
         // reverb: {
         //   wet: 0.5,
@@ -306,19 +306,19 @@ const kits = {
       }
     ),
     f: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
         volume: 0.5 }
     ),
     j: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
-        volume: 0.5 }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
+        volume: 0.3 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc1.wav`,
-        volume: 0.5 }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
+        volume: 0.3 }
     ),
     l: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
         volume: 0.5 }
     )
   }
