@@ -164,7 +164,8 @@ const kits = {
         volume: 0.3 }
     ),
     k: new Wad(
-      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc1.wav` }
+      { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc3.wav`,
+        volume: 0.5 }
     ),
     l: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
