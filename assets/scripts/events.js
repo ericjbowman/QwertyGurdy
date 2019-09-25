@@ -18,11 +18,11 @@ const state = {
   l: ''
 }
 
-let producer = 'MrBill'
-const producers = ['MrBill', 'Oliver', 'Pascaal', 'Tennyson', 'Custom']
+let producer = 'Mr-Bill'
+const producers = ['Mr-Bill', 'Oliver', 'Pascaal', 'Tennyson', 'Torres-Rengifo', 'Custom']
 
 const kits = {
-  MrBill: {
+  'Mr-Bill': {
     loop1: new Wad(
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop1.wav`,
         loop: true,
@@ -272,6 +272,56 @@ const kits = {
         volume: 0.5 }
     )
   },
+  'Torres-Rengifo': {
+    loop1: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop1.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop2: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop4.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    loop3: new Wad(
+      { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop3.wav',
+        loop: true,
+        volume: 0.5,
+        rate: 1
+      }),
+    s: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoKick1.wav`,
+        volume: 0.5 }
+    ),
+    d: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoTom1.wav`,
+        volume: 0.5
+        // reverb: {
+        //   wet: 0.5,
+        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
+        // }
+        // Reverb slows everything down interfering with sound rendering
+      }
+    ),
+    f: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc1.wav`,
+        volume: 0.5 }
+    ),
+    j: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoHat1.wav`,
+        volume: 0.5 }
+    ),
+    k: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoRim1.wav`,
+        volume: 0.5 }
+    ),
+    l: new Wad(
+      { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc2.wav`,
+        volume: 0.5 }
+    )
+  },
   Custom: {
     loop1: new Wad(
       { source: state.url,
@@ -324,85 +374,6 @@ const kits = {
   }
 }
 
-////////////////////////////////////////////////////////////////////////
-
-// const pascaalLoop = new Wad(
-//   { source: 'https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop.wav',
-//     loop: state.pointLoop.loop,
-//     volume: state.pointLoop.volume,
-//     rate: state.pointLoop.rate
-//   }
-// )
-//
-// const pascaal1 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav` }
-// )
-//
-// const pascaal2 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`
-//     // reverb: {
-//     //   wet: 0.5,
-//     //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-//     // }
-//     // Reverb slows everything down interfering with sound rendering
-//   }
-// )
-//
-// const pascaal3 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnareHat1.wav` }
-// )
-//
-// const pascaal4 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav` }
-// )
-//
-// const pascaal5 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc1.wav` }
-// )
-//
-// const pascaal6 = new Wad(
-//   { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav` }
-// )
-
-////////////////////////////////////////////////////////////////////////////////
-
-// const pointKick1 = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalKick1.wav' }
-// )
-//
-// const pointSnare1 = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalSnare1.wav',
-//     reverb: {
-//       wet: 0.5,
-//       impulse: './public/sounds/Reverb/CementBlocks1.wav'
-//     }
-//   }
-// )
-//
-// const pointHat1 = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalHat1.wav' }
-// )
-//
-// const pointClap1 = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalSnare2.wav' }
-// )
-//
-// const pointPerc1 = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalPerc1.wav' }
-// )
-//
-// const pointRide = new Wad(
-//   { source: './public/sounds/Pascaal/PascaalTom.wav' }
-// )
-
-///////////////////////////////////////
-
-// const pointLoopParams = {
-//   loop: true,
-//   volume: 0.5,
-//   rate: 1
-// }
-// const saw = new Wad({ ...this.state.saw, source: 'sawtooth' })
 let customLoop
 
 const playLoop = () => {
@@ -613,11 +584,12 @@ const addHandlers = () => {
   $('#handlebar-uploads').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
-  $('#MrBill').on('click', () => onClickProducer('MrBill'))
+  $('#Mr-Bill').on('click', () => onClickProducer('Mr-Bill'))
   $('#Oliver').on('click', () => onClickProducer('Oliver'))
   $('#Pascaal').on('click', () => onClickProducer('Pascaal'))
   $('#PointPoint').on('click', () => onClickProducer('PointPoint'))
   $('#Tennyson').on('click', () => onClickProducer('Tennyson'))
+  $('#Torres-Rengifo').on('click', () => onClickProducer('Torres-Rengifo'))
   $('#Custom').on('click', () => onClickProducer('Custom'))
   $('#volume').on('change', onChangeVolume)
   $('#detune').on('change', onChangeDetune)
