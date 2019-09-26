@@ -171,7 +171,7 @@ p {
 .key {
   width: 100px;
   height: auto;
-  margin: 5px;
+  margin: 0 5px;
   z-index: 4;
   // filter: sepia(75%);
 }
@@ -188,6 +188,12 @@ p {
   justify-content: center;
   filter: hue-rotate(120deg);
     -webkit-filter: hue-rotate(120deg);
+}
+
+.hamburger-container {
+  // margin-top: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 .key-div {
@@ -273,6 +279,31 @@ label {
 
 .input-width {
   width: 300px;
+}
+
+.button-options {
+  margin: 0 27px -32px;
+  height: 55px;
+  width: 55px;
+  transition: .3s;
+}
+
+.button-options:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+  // filter: brightness(1.5);
+  //   -webkit-filter: brightness(1.5);
+}
+
+.close-btn {
+  background-color: $blue;
+  color: white;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background-color: lighten($blue, 10%);
+  cursor: pointer;
 }
 
 .loader {

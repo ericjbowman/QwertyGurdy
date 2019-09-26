@@ -113,6 +113,32 @@
                   step="0.1"/> -->
               </div>
             </div>
+            <!-- <img class="button-options" src="public/Hamburger.png" alt="button menu"> -->
+            <div class="hamburger-container">
+              <div class="key-row">
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#s-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#d-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#f-modal" alt="button controls">
+                </div>
+              </div>
+              <div class="key-row">
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#j-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#k-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#l-modal" alt="button controls">
+                </div>
+              </div>
+            </div>
+
             <div class="key-container">
               <div class="key-row">
                 <div class="key-div">
@@ -171,6 +197,217 @@
             <div id="sound-display">
             </div>
             <div id="handlebar-uploads">
+            </div>
+          </div>
+          <!-- Modals -->
+          <!-- S Modal -->
+          <div class="modal fade" id="s-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"S" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="s-volume" name="s-volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="s-detune" name="s-detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="s-reverb" name="s-reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- D modal -->
+          <div class="modal fade" id="d-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"D" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="d-volume" name="d-volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="d-detune" name="d-detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="d-reverb" name="d-reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- F Modal -->
+          <div class="modal fade" id="f-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"F" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="f-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="f-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="f-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- J Modal -->
+          <div class="modal fade" id="j-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"J" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="j-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="j-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="j-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- K Modal -->
+          <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"K" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="k-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="k-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="k-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- L Modal -->
+          <div class="modal fade" id="l-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">"L" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="l-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="l-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="l-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
             </div>
           </div>
         </main>
