@@ -49,6 +49,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -59,6 +68,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -69,6 +87,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -79,6 +106,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -89,6 +125,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -99,6 +144,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -182,6 +236,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -192,12 +255,16 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
-        // reverb: {
-        //   wet: 0.5,
-        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-        // }
-        // Reverb slows everything down interfering with sound rendering
       }
     ),
     f: new Wad(
@@ -207,6 +274,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -217,6 +293,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -227,6 +312,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -237,6 +331,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -267,6 +370,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -277,6 +389,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -287,6 +408,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -297,6 +427,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -307,6 +446,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -316,6 +464,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -346,6 +503,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -356,6 +522,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
         // reverb: {
         //   wet: 0.5,
@@ -371,6 +546,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -381,6 +565,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -391,6 +584,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -401,6 +603,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -431,6 +642,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -441,6 +661,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
         // reverb: {
         //   wet: 0.5,
@@ -456,6 +685,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -466,6 +704,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -476,6 +723,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -486,6 +742,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -516,6 +781,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -526,6 +800,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
         // reverb: {
         //   wet: 0.5,
@@ -541,6 +824,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -551,6 +843,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -561,6 +862,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     ),
@@ -571,6 +881,15 @@ const kits = {
         reverb: {
           wet: 0,
           impulse: 'public/CementBlocks1.wav'
+        },
+        filter: {
+          type: 'lowpass', // What type of filter is applied.
+          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
+          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+          // env: { // Filter envelope.
+          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+          // }
         }
       }
     )
@@ -716,6 +1035,11 @@ const onChangeKeyVolume = (event, key) => {
         wet: kits[producer][key].reverb.wet,
         impulse: 'public/CementBlocks1.wav'
       },
+      filter: {
+        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+      },
       volume: event.target.valueAsNumber
     })
   })
@@ -729,6 +1053,11 @@ const onChangeKeyDetune = (event, key) => {
       reverb: {
         wet: kits[producer][key].reverb.wet,
         impulse: 'public/CementBlocks1.wav'
+      },
+      filter: {
+        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
       },
       detune: event.target.valueAsNumber
     })
@@ -744,9 +1073,59 @@ const onChangeKeyReverb = (event, key) => {
       reverb: {
         wet: event.target.valueAsNumber,
         impulse: 'public/CementBlocks1.wav'
+      },
+      filter: {
+        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
       }
     })
   })
+}
+
+const onChangeKeyFilter = (event, key) => {
+  console.log('filter freq', kits[producer][key].filter.frequency)
+  console.log('filter type', kits[producer][key].filter.type)
+  producers.forEach(prod => {
+    kits[prod][key] = new Wad({
+      source: kits[prod][key].source,
+      volume: kits[prod][key].volume,
+      detune: kits[prod][key].detune,
+      reverb: {
+        wet: kits[prod][key].reverb.wet,
+        impulse: 'public/CementBlocks1.wav'
+      },
+      filter: {
+        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+        frequency: event.target.valueAsNumber, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+      }
+    })
+  })
+  console.log('filter freq after freq change func', kits[producer][key].filter.frequency)
+  console.log('filter type after freq change func', kits[producer][key].filter.type)
+  console.log('kit producer key', kits[producer][key])
+}
+
+const onChangeKeyFilterType = (event, key) => {
+  console.log('key filter type', event.target.value)
+  producers.forEach(prod => {
+    kits[prod][key] = new Wad({
+      source: kits[prod][key].source,
+      volume: kits[prod][key].volume,
+      detune: kits[prod][key].detune,
+      reverb: {
+        wet: kits[prod][key].reverb.wet,
+        impulse: 'public/CementBlocks1.wav'
+      },
+      filter: {
+        type: event.target.value, // What type of filter is applied.
+        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+      }
+    })
+  })
+  console.log('kit producer key', kits[producer][key].filter[0].frequency)
 }
 
 const onSelectLoop = event => {
@@ -818,6 +1197,17 @@ const indexAndShowUploads = () => {
     .catch(console.log)
 }
 
+const changeKeyParams = () => {
+  const keys = ['s', 'd', 'f', 'j', 'k', 'l']
+  keys.forEach(key => {
+    $(`#${key}-volume`).on('change', (event) => onChangeKeyVolume(event, `${key}`))
+    $(`#${key}-detune`).on('change', (event) => onChangeKeyDetune(event, `${key}`))
+    $(`#${key}-reverb`).on('change', (event) => onChangeKeyReverb(event, `${key}`))
+    $(`#${key}-filter`).on('change', (event) => onChangeKeyFilter(event, `${key}`))
+    $(`.${key}-filter-type`).on('change', (event) => onChangeKeyFilterType(event, `${key}`))
+  })
+}
+
 const addHandlers = () => {
   const httpRequest = new XMLHttpRequest()
   httpRequest.open('GET', 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav')
@@ -838,29 +1228,36 @@ const addHandlers = () => {
   $('#Custom').on('click', () => onClickProducer('Custom'))
   $('#volume').on('change', onChangeVolume)
   $('#detune').on('change', onChangeDetune)
-  $('#s-volume').on('change', (event) => onChangeKeyVolume(event, 's'))
-  $('#s-detune').on('change', (event) => onChangeKeyDetune(event, 's'))
-  $('#s-reverb').on('change', (event) => onChangeKeyReverb(event, 's'))
 
-  $('#d-volume').on('change', (event) => onChangeKeyVolume(event, 'd'))
-  $('#d-detune').on('change', (event) => onChangeKeyDetune(event, 'd'))
-  $('#d-reverb').on('change', (event) => onChangeKeyReverb(event, 'd'))
+  changeKeyParams()
 
-  $('#f-volume').on('change', (event) => onChangeKeyVolume(event, 'f'))
-  $('#f-detune').on('change', (event) => onChangeKeyDetune(event, 'f'))
-  $('#f-reverb').on('change', (event) => onChangeKeyReverb(event, 'f'))
-
-  $('#j-volume').on('change', (event) => onChangeKeyVolume(event, 'j'))
-  $('#j-detune').on('change', (event) => onChangeKeyDetune(event, 'j'))
-  $('#j-reverb').on('change', (event) => onChangeKeyReverb(event, 'j'))
-
-  $('#k-volume').on('change', (event) => onChangeKeyVolume(event, 'k'))
-  $('#k-detune').on('change', (event) => onChangeKeyDetune(event, 'k'))
-  $('#k-reverb').on('change', (event) => onChangeKeyReverb(event, 'k'))
-
-  $('#l-volume').on('change', (event) => onChangeKeyVolume(event, 'l'))
-  $('#l-detune').on('change', (event) => onChangeKeyDetune(event, 'l'))
-  $('#l-reverb').on('change', (event) => onChangeKeyReverb(event, 'l'))
+  // $('#s-volume').on('change', (event) => onChangeKeyVolume(event, 's'))
+  // $('#s-detune').on('change', (event) => onChangeKeyDetune(event, 's'))
+  // $('#s-reverb').on('change', (event) => onChangeKeyReverb(event, 's'))
+  // $('#s-filter').on('change', (event) => onChangeKeyFilter(event, 's'))
+  // $('.s-filter-type').on('change', (event) => onChangeKeyFilterType(event, 's'))
+  //
+  // $('#d-volume').on('change', (event) => onChangeKeyVolume(event, 'd'))
+  // $('#d-detune').on('change', (event) => onChangeKeyDetune(event, 'd'))
+  // $('#d-reverb').on('change', (event) => onChangeKeyReverb(event, 'd'))
+  // $('#d-filter').on('change', (event) => onChangeKeyFilter(event, 'd'))
+  // $('.d-filter-type').on('change', (event) => onChangeKeyFilterType(event, 'd'))
+  //
+  // $('#f-volume').on('change', (event) => onChangeKeyVolume(event, 'f'))
+  // $('#f-detune').on('change', (event) => onChangeKeyDetune(event, 'f'))
+  // $('#f-reverb').on('change', (event) => onChangeKeyReverb(event, 'f'))
+  //
+  // $('#j-volume').on('change', (event) => onChangeKeyVolume(event, 'j'))
+  // $('#j-detune').on('change', (event) => onChangeKeyDetune(event, 'j'))
+  // $('#j-reverb').on('change', (event) => onChangeKeyReverb(event, 'j'))
+  //
+  // $('#k-volume').on('change', (event) => onChangeKeyVolume(event, 'k'))
+  // $('#k-detune').on('change', (event) => onChangeKeyDetune(event, 'k'))
+  // $('#k-reverb').on('change', (event) => onChangeKeyReverb(event, 'k'))
+  //
+  // $('#l-volume').on('change', (event) => onChangeKeyVolume(event, 'l'))
+  // $('#l-detune').on('change', (event) => onChangeKeyDetune(event, 'l'))
+  // $('#l-reverb').on('change', (event) => onChangeKeyReverb(event, 'l'))
 
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)

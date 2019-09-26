@@ -164,8 +164,12 @@ p {
   width: 100px;
 }
 
-.radio {
-  font-size: 20px;
+.filter-label {
+  width: 100px;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .key {
@@ -194,6 +198,24 @@ p {
   // margin-top: 2em;
   display: flex;
   justify-content: center;
+}
+
+.modal-content {
+  background-image: url('public/wall.jpg');
+  background-size: cover;
+  color: $blue;
+}
+
+.modal-header, .modal-footer {
+  background-color: rgba(234, 221, 230, 1);
+  border-width: 2px;
+  border-color: $blue;
+}
+
+.modal-body {
+  background-color: rgba(255, 255, 255, 0.7);
+  // background-color: rgba(234, 221, 230, 0.7);
+  // background-color: white;
 }
 
 .key-div {

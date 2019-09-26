@@ -201,11 +201,11 @@
           </div>
           <!-- Modals -->
           <!-- S Modal -->
-          <div class="modal fade" id="s-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="s-modal" tabindex="-1" role="dialog" aria-labelledby="sModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"S" Key Parameters</h5>
+                  <h5 class="modal-title" id="sModalLabel">"S" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -227,6 +227,23 @@
                     <input class="custom-range" type="range" id="s-reverb" name="s-reverb"
                            value="0" min="0" max="1" step="0.1">
                   </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="s-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="s-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="s-filter" name="s-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -236,11 +253,11 @@
             </div>
           </div>
           <!-- D modal -->
-          <div class="modal fade" id="d-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="d-modal" tabindex="-1" role="dialog" aria-labelledby="dModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"D" Key Parameters</h5>
+                  <h5 class="modal-title" id="dModalLabel">"D" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -262,6 +279,23 @@
                     <input class="custom-range" type="range" id="d-reverb" name="d-reverb"
                            value="0" min="0" max="1" step="0.1">
                   </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="d-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="d-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="d-filter" name="d-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -271,11 +305,11 @@
             </div>
           </div>
           <!-- F Modal -->
-          <div class="modal fade" id="f-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="f-modal" tabindex="-1" role="dialog" aria-labelledby="fModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"F" Key Parameters</h5>
+                  <h5 class="modal-title" id="fModalLabel">"F" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -297,6 +331,23 @@
                     <input class="custom-range" type="range" id="f-reverb" name="reverb"
                            value="0" min="0" max="1" step="0.1">
                   </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="f-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="f-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="f-filter" name="f-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -306,11 +357,11 @@
             </div>
           </div>
           <!-- J Modal -->
-          <div class="modal fade" id="j-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="j-modal" tabindex="-1" role="dialog" aria-labelledby="jModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"J" Key Parameters</h5>
+                  <h5 class="modal-title" id="jModalLabel">"J" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -332,6 +383,23 @@
                     <input class="custom-range" type="range" id="j-reverb" name="reverb"
                            value="0" min="0" max="1" step="0.1">
                   </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="j-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="j-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="j-filter" name="j-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -341,11 +409,11 @@
             </div>
           </div>
           <!-- K Modal -->
-          <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"K" Key Parameters</h5>
+                  <h5 class="modal-title" id="kModalLabel">"K" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -367,6 +435,23 @@
                     <input class="custom-range" type="range" id="k-reverb" name="reverb"
                            value="0" min="0" max="1" step="0.1">
                   </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="k-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="k-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="k-filter" name="k-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -376,11 +461,11 @@
             </div>
           </div>
           <!-- L Modal -->
-          <div class="modal fade" id="l-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal fade" id="l-modal" tabindex="-1" role="dialog" aria-labelledby="lModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">"L" Key Parameters</h5>
+                  <h5 class="modal-title" id="lModalLabel">"L" Key Parameters</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -401,6 +486,23 @@
                     <label for="reverb">Reverb</label>
                     <input class="custom-range" type="range" id="l-reverb" name="reverb"
                            value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="l-filter-type" name="filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="l-filter-type" name="filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="l-filter" name="l-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="modal-footer">
