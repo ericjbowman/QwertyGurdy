@@ -708,40 +708,44 @@ const onChangeDetune = event => {
 }
 
 const onChangeKeyVolume = (event, key) => {
-  kits[producer][key] = new Wad({
-    source: kits[producer][key].source,
-    detune: kits[producer][key].detune,
-    reverb: {
-      wet: kits[producer][key].reverb.wet,
-      impulse: 'public/CementBlocks1.wav'
-    },
-    volume: event.target.valueAsNumber
+  producers.forEach(prod => {
+    kits[producer][key] = new Wad({
+      source: kits[producer][key].source,
+      detune: kits[producer][key].detune,
+      reverb: {
+        wet: kits[producer][key].reverb.wet,
+        impulse: 'public/CementBlocks1.wav'
+      },
+      volume: event.target.valueAsNumber
+    })
   })
 }
 
 const onChangeKeyDetune = (event, key) => {
-  // kits[producer][key].setDetune(event.target.valueAsNumber)
-  // console.log('key detune', kits[producer][key].detune)
-  kits[producer][key] = new Wad({
-    source: kits[producer][key].source,
-    volume: kits[producer][key].volume,
-    reverb: {
-      wet: kits[producer][key].reverb.wet,
-      impulse: 'public/CementBlocks1.wav'
-    },
-    detune: event.target.valueAsNumber
+  producers.forEach(prod => {
+    kits[producer][key] = new Wad({
+      source: kits[producer][key].source,
+      volume: kits[producer][key].volume,
+      reverb: {
+        wet: kits[producer][key].reverb.wet,
+        impulse: 'public/CementBlocks1.wav'
+      },
+      detune: event.target.valueAsNumber
+    })
   })
 }
 
 const onChangeKeyReverb = (event, key) => {
-  kits[producer][key] = new Wad({
-    source: kits[producer][key].source,
-    volume: kits[producer][key].volume,
-    detune: kits[producer][key].detune,
-    reverb: {
-      wet: event.target.valueAsNumber,
-      impulse: 'public/CementBlocks1.wav'
-    }
+  producers.forEach(prod => {
+    kits[prod][key] = new Wad({
+      source: kits[prod][key].source,
+      volume: kits[prod][key].volume,
+      detune: kits[prod][key].detune,
+      reverb: {
+        wet: event.target.valueAsNumber,
+        impulse: 'public/CementBlocks1.wav'
+      }
+    })
   })
 }
 
