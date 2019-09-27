@@ -18,9 +18,9 @@ $lightpink: #fca2a8;
 $grey: #59606a;
 
 body {
-  background-image: url('public/Wall.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url('public/Wall.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
   // background-attachment: fixed;
   margin: 0;
   font-family: sans-serif;
@@ -39,7 +39,7 @@ nav {
 }
 
 main {
-  background-color: rgba(234, 221, 230, 0.7);
+  background-color: rgba(234, 221, 230, 1);
   margin-left: 250px;
   height: 650px;
 }
@@ -102,7 +102,8 @@ p {
 
 .upload-label:focus,
 .upload-label:hover {
-    background-color: lighten($darkblue, 15%);
+    background-color: $pink;
+    border: none;
     cursor: pointer;
 }
 
@@ -140,7 +141,8 @@ p {
 }
 
 .play-btn:hover, .submit-btn:hover {
-  background-color: lighten($darkblue, 15%);
+  background-color: $pink;
+  border: none;
 }
 
 .stop {
@@ -210,8 +212,8 @@ p {
 }
 
 .modal-content {
-  background-image: url('public/wall.jpg');
-  background-size: cover;
+  // background-image: url('public/wall.jpg');
+  // background-size: cover;
   color: $blue;
 }
 
@@ -333,7 +335,8 @@ label {
 }
 
 .close-btn:hover {
-  background-color: lighten($blue, 10%);
+  background-color: $pink;
+  border: none;
   cursor: pointer;
 }
 
