@@ -174,29 +174,13 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="loader">
-              <div class="outer"></div>
-              <div class="middle"></div>
-              <div class="inner"></div>
-            </div> -->
             <div class="upload-div block">
               <form enctype="multipart/form-data" id="sound-uploader">
                 <input id="file" name="file" type="file" class="file-upload input-width"/>
                 <label for="file" class="upload-label">Upload Loop</label>
                 <input name="title" placeholder="Loop Name" class="input input-width" type="text"/>
-                <!-- <input id="is-loop" type="radio" value="isLoop" class="radio">Loop</input>
-                <input id="not-loop" type="radio" value="notLoop" class="radio">Not Loop</input> -->
                 <input type="submit" class="submit-btn"/>
               </form>
-            </div>
-            <!-- <div class="loader">
-              <div class="outer"></div>
-              <div class="middle"></div>
-              <div class="inner"></div>
-            </div> -->
-            <div id="sound-display">
-            </div>
-            <div id="handlebar-uploads">
             </div>
           </div>
           <!-- Modals -->
@@ -211,6 +195,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
+                  <div id="s-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
 
                   <div class="block range">
                     <label for="volume">Volume</label>
@@ -244,6 +230,20 @@
                       </div>
                     </div>
                   </div>
+                  <div class="upload-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="oneShot-uploader">
+                      <input id="oneShot" name="file" type="file" class="input-width"/>
+                      <!-- <div class="flex-center"> -->
+                        <label for="file" class="upload-label modal-input">Upload Sample</label>
+                      <!-- </div> -->
+                      <!-- <div class="flex-center"> -->
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text"/>
+                      <!-- </div> -->
+                      <!-- <div class="flex-center"> -->
+                        <input type="submit" class="submit-btn modal-input"/>
+                      <!-- </div> -->
+                    </form>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
@@ -263,7 +263,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
+                  <div id="d-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
                   <div class="block range">
                     <label for="volume">Volume</label>
                     <input class="custom-range" type="range" id="d-volume" name="d-volume"
@@ -315,7 +316,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
+                  <div id="f-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
                   <div class="block range">
                     <label for="volume">Volume</label>
                     <input class="custom-range" type="range" id="f-volume" name="volume"
@@ -367,7 +369,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
+                  <div id="j-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
                   <div class="block range">
                     <label for="volume">Volume</label>
                     <input class="custom-range" type="range" id="j-volume" name="volume"
@@ -419,7 +422,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
+                  <div id="k-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
                   <div class="block range">
                     <label for="volume">Volume</label>
                     <input class="custom-range" type="range" id="k-volume" name="volume"
@@ -471,7 +475,8 @@
                   </button>
                 </div>
                 <div class="modal-body">
-
+                  <div id="l-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
                   <div class="block range">
                     <label for="volume">Volume</label>
                     <input class="custom-range" type="range" id="l-volume" name="volume"

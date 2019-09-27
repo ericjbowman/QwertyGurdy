@@ -62,6 +62,11 @@ p {
   z-index: 3;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 .producer {
   padding: 1em;
   color: $darkblue;
@@ -86,7 +91,7 @@ p {
 	z-index: -1;
 }
 
-.file-upload + label {
+.upload-label {
     color: white;
     background-color: $blue;
     display: inline-block;
@@ -95,8 +100,8 @@ p {
     padding-top: 7px;
 }
 
-.file-upload:focus + label,
-.file-upload + label:hover {
+.upload-label:focus,
+.upload-label:hover {
     background-color: lighten($darkblue, 15%);
     cursor: pointer;
 }
@@ -152,6 +157,10 @@ p {
 .upload-div {
   padding-top: 2em;
 }
+
+// .oneShot-uploader {
+//   margin: 0 auto;
+// }
 
 .slider-container {
   // background-color: green;
@@ -304,9 +313,9 @@ label {
 }
 
 .button-options {
-  margin: 0 27px -32px;
-  height: 55px;
-  width: 55px;
+  margin: 0 22px -32px;
+  height: 65px;
+  width: 65px;
   transition: .3s;
 }
 

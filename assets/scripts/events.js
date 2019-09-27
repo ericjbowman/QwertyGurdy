@@ -3,6 +3,13 @@ const config = require('./config.js')
 const store = require('./store.js')
 const api = require('./api.js')
 const indexUploads = require('./templates/index-uploads.handlebars')
+const indexOneShots = require('./templates/index-oneShots.handlebars')
+const indexSOneShots = require('./templates/index-s-oneShots.handlebars')
+const indexDOneShots = require('./templates/index-d-oneShots.handlebars')
+const indexFOneShots = require('./templates/index-f-oneShots.handlebars')
+const indexJOneShots = require('./templates/index-j-oneShots.handlebars')
+const indexKOneShots = require('./templates/index-k-oneShots.handlebars')
+const indexLOneShots = require('./templates/index-l-oneShots.handlebars')
 // const getFormFields = require('../../lib/get-form-fields.js')
 
 let loop = 'loop1'
@@ -10,6 +17,7 @@ let loop = 'loop1'
 const state = {
   volume: 0.5,
   url: '',
+  oneShotUrl: '',
   detune: 0,
   s: '',
   d: '',
@@ -1144,6 +1152,35 @@ const onSelectCustomLoop = event => {
   console.log('event.target.value', event.target.value)
 }
 
+const setCustomOneShot = (letter, value) => {
+  kits.Custom[letter] = new Wad(
+    { source: value,
+      volume: kits.Custom.s.volume,
+      detune: kits.Custom.s.detune,
+      reverb: {
+        wet: kits.Custom.s.reverb.wet,
+        impulse: 'public/CementBlocks1.wav'
+      },
+      filter: {
+        type: kits.Custom.s.filter[0].type ? kits.Custom.s.filter[0].type : kits.Custom.s.filter.type, // What type of filter is applied.
+        frequency: kits.Custom.s.filter[0].frequency ? kits.Custom.s.filter[0].frequency : kits.Custom.s.filter.frequency, // The frequency, in hertz, to which the filter is applied.
+        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+        // env: { // Filter envelope.
+        //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
+        //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
+        // }
+      }
+    }
+  )
+}
+
+const onSelectCustomOneShotS = event => {
+  console.log('custom one shot selected', event.target.value)
+  setCustomOneShot('s', event.target.value)
+  // state.oneShotUrl = event.target.value
+  console.log('event.target.value', event.target.value)
+}
+
 const onClickProducer = (selectedProducer) => {
   producer = selectedProducer
   const dormantProducers = producers.filter(x => x !== selectedProducer)
@@ -1155,9 +1192,11 @@ const onClickProducer = (selectedProducer) => {
   if (selectedProducer === 'Custom') {
     $('#presets').hide()
     $('#handlebar-uploads').show()
+    $('.handlebar-oneShots').show()
   } else {
     $('#handlebar-uploads').hide()
     $('#presets').show()
+    $('.handlebar-oneShots').hide()
   }
 }
 
@@ -1197,6 +1236,21 @@ const indexAndShowUploads = () => {
     .catch(console.log)
 }
 
+const indexAndShowOneShots = () => {
+  api.indexOneShots()
+    .then((responseData) => {
+      $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
+      return responseData
+    })
+    .then((responseData) => {
+      store.oneShots = responseData.oneShots
+      return responseData
+    })
+    .then(() => { state.oneShotUrl = store.oneShots[0].url })
+    .then(() => setCustomOneShot('s', store.oneShots[0].url))
+    .catch(console.log)
+}
+
 const changeKeyParams = () => {
   const keys = ['s', 'd', 'f', 'j', 'k', 'l']
   keys.forEach(key => {
@@ -1208,6 +1262,23 @@ const changeKeyParams = () => {
   })
 }
 
+const uploadOneShot = event => {
+  event.preventDefault()
+  const formData = new FormData(event.target)
+  console.log('formData', formData.keys())
+
+  $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/oneShots',
+    data: formData,
+    contentType: false,
+    processData: false
+  })
+    .then(console.log)
+    .then(indexAndShowOneShots)
+    .catch(() => alert('failure'))
+}
+
 const addHandlers = () => {
   const httpRequest = new XMLHttpRequest()
   httpRequest.open('GET', 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav')
@@ -1215,8 +1286,10 @@ const addHandlers = () => {
   httpRequest.send()
 
   indexAndShowUploads()
+  indexAndShowOneShots()
 
   $('#handlebar-uploads').hide()
+  $('.handlebar-oneShots').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
   $('#Mr-Bill').on('click', () => onClickProducer('Mr-Bill'))
@@ -1231,42 +1304,16 @@ const addHandlers = () => {
 
   changeKeyParams()
 
-  // $('#s-volume').on('change', (event) => onChangeKeyVolume(event, 's'))
-  // $('#s-detune').on('change', (event) => onChangeKeyDetune(event, 's'))
-  // $('#s-reverb').on('change', (event) => onChangeKeyReverb(event, 's'))
-  // $('#s-filter').on('change', (event) => onChangeKeyFilter(event, 's'))
-  // $('.s-filter-type').on('change', (event) => onChangeKeyFilterType(event, 's'))
-  //
-  // $('#d-volume').on('change', (event) => onChangeKeyVolume(event, 'd'))
-  // $('#d-detune').on('change', (event) => onChangeKeyDetune(event, 'd'))
-  // $('#d-reverb').on('change', (event) => onChangeKeyReverb(event, 'd'))
-  // $('#d-filter').on('change', (event) => onChangeKeyFilter(event, 'd'))
-  // $('.d-filter-type').on('change', (event) => onChangeKeyFilterType(event, 'd'))
-  //
-  // $('#f-volume').on('change', (event) => onChangeKeyVolume(event, 'f'))
-  // $('#f-detune').on('change', (event) => onChangeKeyDetune(event, 'f'))
-  // $('#f-reverb').on('change', (event) => onChangeKeyReverb(event, 'f'))
-  //
-  // $('#j-volume').on('change', (event) => onChangeKeyVolume(event, 'j'))
-  // $('#j-detune').on('change', (event) => onChangeKeyDetune(event, 'j'))
-  // $('#j-reverb').on('change', (event) => onChangeKeyReverb(event, 'j'))
-  //
-  // $('#k-volume').on('change', (event) => onChangeKeyVolume(event, 'k'))
-  // $('#k-detune').on('change', (event) => onChangeKeyDetune(event, 'k'))
-  // $('#k-reverb').on('change', (event) => onChangeKeyReverb(event, 'k'))
-  //
-  // $('#l-volume').on('change', (event) => onChangeKeyVolume(event, 'l'))
-  // $('#l-detune').on('change', (event) => onChangeKeyDetune(event, 'l'))
-  // $('#l-reverb').on('change', (event) => onChangeKeyReverb(event, 'l'))
-
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
+  $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', onSelectCustomOneShotS)
   $('#s').on('click', () => kits[producer].s.play())
   $('#d').on('click', () => kits[producer].d.play())
   $('#f').on('click', () => kits[producer].f.play())
   $('#j').on('click', () => kits[producer].j.play())
   $('#k').on('click', () => kits[producer].k.play())
   $('#l').on('click', () => kits[producer].l.play())
+  $('#oneShot-uploader').on('submit', uploadOneShot)
   $('#sound-uploader').on('submit', event => {
     event.preventDefault()
     $('.loader').show()
