@@ -30,34 +30,34 @@ const state = {
 let producer = 'Mr-Bill'
 const producers = ['Mr-Bill', 'Oliver', 'Pascaal', 'Tennyson', 'Torres-Rengifo', 'Custom']
 
-const kits = {
+const kitState = {
   'Mr-Bill': {
-    loop1: new Wad(
+    loop1:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop1.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop2.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop3.wav`,
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -67,16 +67,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -86,16 +85,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare4.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -105,16 +103,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillHat1.wav`,
         volume: 0.4,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -124,16 +121,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc1.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -143,16 +139,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare3.wav`,
         volume: 0.4,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -163,32 +158,31 @@ const kits = {
           // }
         }
       }
-    )
   },
   // PointPoint: {
-  //   loop1: new Wad(
+  //   loop1:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
   //       loop: true,
   //       volume: 0.5,
   //       rate: 1
-  //     }),
-  //   loop2: new Wad(
+  //     },
+  //   loop2:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop2.wav`,
   //       loop: true,
   //       volume: 0.5,
   //       rate: 1
-  //     }),
-  //   loop3: new Wad(
+  //     },
+  //   loop3:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop3.wav`,
   //       loop: true,
   //       volume: 0.5,
   //       rate: 1
-  //     }),
-  //   s: new Wad(
+  //     },
+  //   s:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
   //       volume: 0.5 }
-  //   ),
-  //   d: new Wad(
+  //   ,
+  //   d:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
   //       volume: 0.5
   //       // reverb: {
@@ -197,54 +191,54 @@ const kits = {
   //       // }
   //       // Reverb slows everything down interfering with sound rendering
   //     }
-  //   ),
-  //   f: new Wad(
+  //   ,
+  //   f:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
   //       volume: 0.5 }
-  //   ),
-  //   j: new Wad(
+  //   ,
+  //   j:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
   //       volume: 0.3 }
-  //   ),
-  //   k: new Wad(
+  //   ,
+  //   k:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
   //       volume: 0.5 }
-  //   ),
-  //   l: new Wad(
+  //   ,
+  //   l:
   //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
   //       volume: 0.3 }
-  //   )
+  //
   // },
   Pascaal: {
-    loop1: new Wad(
+    loop1:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
         loop: true,
         volume: 0.5,
         detune: 0,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop2.wav`,
         loop: true,
         volume: 0.5,
         detune: 0,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop3.wav`,
         loop: true,
         volume: 0.5,
         detune: 0,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
         volume: 0.6,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -254,16 +248,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -273,16 +266,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -292,16 +284,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
         volume: 0.3,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -311,16 +302,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc3.wav`,
         volume: 0.5,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -330,16 +320,15 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
         volume: 0.3,
         detune: 0,
-        // reverb: {
-        //   wet: 0,
-        //   impulse: 'public/CementBlocks1.wav'
-        // },
+        reverb: {
+          wet: 0,
+          impulse: 'public/CementBlocks1.wav'
+        },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -350,28 +339,28 @@ const kits = {
           // }
         }
       }
-    )
+
   },
   Tennyson: {
-    loop1: new Wad(
+    loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop1.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop2.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop3.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
         volume: 0.5,
         detune: 0,
@@ -388,9 +377,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
         volume: 0.5,
         detune: 0,
@@ -407,9 +395,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
         volume: 0.5,
         detune: 0,
@@ -426,9 +413,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
         volume: 0.3,
         detune: 0,
@@ -445,9 +431,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
         volume: 0.3,
         detune: 0,
@@ -464,9 +449,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
         volume: 0.5,
         reverb: {
@@ -483,28 +467,27 @@ const kits = {
           // }
         }
       }
-    )
   },
   Oliver: {
-    loop1: new Wad(
+    loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop1.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
         volume: 0.5,
         detune: 0,
@@ -521,9 +504,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
         volume: 0.5,
         detune: 0,
@@ -545,9 +527,8 @@ const kits = {
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
         // }
         // Reverb slows everything down interfering with sound rendering
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
         volume: 0.5,
         detune: 0,
@@ -564,9 +545,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
         volume: 0.5,
         detune: 0,
@@ -583,9 +563,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat2.wav`,
         volume: 0.5,
         detune: 0,
@@ -602,9 +581,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
         volume: 0.5,
         detune: 0,
@@ -622,28 +600,28 @@ const kits = {
           // }
         }
       }
-    )
+
   },
   'Torres-Rengifo': {
-    loop1: new Wad(
+    loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop1.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop4.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop3.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoKick1.wav`,
         volume: 0.5,
         detune: 0,
@@ -660,9 +638,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoTom1.wav`,
         volume: 0.5,
         detune: 0,
@@ -684,9 +661,8 @@ const kits = {
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
         // }
         // Reverb slows everything down interfering with sound rendering
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc1.wav`,
         volume: 0.5,
         detune: 0,
@@ -703,9 +679,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoHat1.wav`,
         volume: 0.5,
         detune: 0,
@@ -722,9 +697,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoRim1.wav`,
         volume: 0.5,
         detune: 0,
@@ -741,9 +715,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc2.wav`,
         volume: 0.5,
         detune: 0,
@@ -761,28 +734,28 @@ const kits = {
           // }
         }
       }
-    )
+
   },
   Custom: {
-    loop1: new Wad(
+    loop1:
       { source: state.url,
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop2: new Wad(
+      },
+    loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    loop3: new Wad(
+      },
+    loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
         loop: true,
         volume: 0.5,
         rate: 1
-      }),
-    s: new Wad(
+      },
+    s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
         volume: 0.5,
         detune: 0,
@@ -799,9 +772,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    d: new Wad(
+      },
+    d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
         volume: 0.5,
         detune: 0,
@@ -823,9 +795,8 @@ const kits = {
         //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
         // }
         // Reverb slows everything down interfering with sound rendering
-      }
-    ),
-    f: new Wad(
+      },
+    f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
         volume: 0.5,
         detune: 0,
@@ -842,9 +813,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    j: new Wad(
+      },
+    j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
         volume: 0.3,
         detune: 0,
@@ -861,9 +831,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    k: new Wad(
+      },
+    k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
         volume: 0.3,
         detune: 0,
@@ -880,9 +849,8 @@ const kits = {
           //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
           // }
         }
-      }
-    ),
-    l: new Wad(
+      },
+    l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
         volume: 0.5,
         detune: 0,
@@ -900,8 +868,29 @@ const kits = {
           // }
         }
       }
-    )
+
   }
+}
+
+let kits = {
+  loop1:
+    new Wad(kitState[producer].loop1),
+  loop2:
+    new Wad(kitState[producer].loop2),
+  loop3:
+    new Wad(kitState[producer].loop3),
+  s:
+    new Wad(kitState[producer].s),
+  d:
+    new Wad(kitState[producer].d),
+  f:
+    new Wad(kitState[producer].f),
+  j:
+    new Wad(kitState[producer].j),
+  k:
+    new Wad(kitState[producer].k),
+  l:
+    new Wad(kitState[producer].l)
 }
 
 let customLoop
@@ -923,7 +912,7 @@ const playLoop = () => {
     $('.play-btn').addClass('stop')
     if (producer !== 'Custom') {
       Wad.stopAll()
-      kits[producer][loop].play(
+      kits[loop].play(
         { loop: true,
           volume: state.volume
         })
@@ -987,17 +976,17 @@ const stop = () => {
 const onkeyDown = event => {
   $(`#${event.keyCode}`).addClass('key-pressed')
   switch (event.keyCode) {
-    case 83 : kits[producer].s.play()
+    case 83 : kits.s.play()
       break
-    case 68 : kits[producer].d.play()
+    case 68 : kits.d.play()
       break
-    case 70 : kits[producer].f.play()
+    case 70 : kits.f.play()
       break
-    case 74 : kits[producer].j.play()
+    case 74 : kits.j.play()
       break
-    case 75 : kits[producer].k.play()
+    case 75 : kits.k.play()
       break
-    case 76 : kits[producer].l.play()
+    case 76 : kits.l.play()
       break
   }
 }
@@ -1008,7 +997,7 @@ const onkeyUp = event => {
 
 const onChangeVolume = event => {
   customLoop.setVolume(event.target.valueAsNumber)
-  kits[producer][loop].setVolume(event.target.valueAsNumber)
+  kits[loop].setVolume(event.target.valueAsNumber)
   state.volume = event.target.valueAsNumber
   producers.forEach(x => {
     kits[x][loop].volume = (event.target.valueAsNumber)
@@ -1027,7 +1016,7 @@ const onChangeDetune = event => {
     kits[x][loop].detune = (event.target.valueAsNumber)
   })
   if (producer !== 'Custom') {
-    kits[producer][loop].setDetune(event.target.valueAsNumber)
+    kits[loop].setDetune(event.target.valueAsNumber)
     console.log('event', event.target.valueAsNumber)
   } else {
     customLoop.setDetune(event.target.valueAsNumber)
@@ -1035,156 +1024,93 @@ const onChangeDetune = event => {
 }
 
 const onChangeKeyVolume = (event, key) => {
+  kits[key] = new Wad(
+    Object.assign(kitState[producer][key], { volume: event.target.valueAsNumber })
+    // ...kits[prod][key],
+    // volume: event.target.valueAsNumber
+  )
   producers.forEach(prod => {
-    // kits[producer][key] = new Wad({
-    //   source: kits[producer][key].source,
-    //   detune: kits[producer][key].detune,
-    //   reverb: {
-    //     wet: kits[producer][key].reverb.wet,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   },
-    //   filter: {
-    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-    //   },
-    //   volume: event.target.valueAsNumber
-    // })
-    kits[prod][key] = new Wad(
-      Object.assign(kits[prod][key], { volume: event.target.valueAsNumber })
-      // ...kits[prod][key],
-      // volume: event.target.valueAsNumber
-    )
+    kitState[prod][key] = Object.assign(kitState[prod][key], { volume: event.target.valueAsNumber })
   })
 }
 
 const onChangeKeyDetune = (event, key) => {
+  kits[key] = new Wad(
+    Object.assign(kitState[producer][key], { detune: event.target.valueAsNumber })
+    // ...kits[prod][key],
+    // detune: event.target.valueAsNumber
+  )
   producers.forEach(prod => {
-    // kits[producer][key] = new Wad({
-    //   source: kits[producer][key].source,
-    //   volume: kits[producer][key].volume,
-    //   reverb: {
-    //     wet: kits[producer][key].reverb.wet,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   },
-    //   filter: {
-    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-    //   },
-    //   detune: event.target.valueAsNumber
-    // })
-    kits[prod][key] = new Wad(
-      Object.assign(kits[prod][key], { detune: event.target.valueAsNumber })
-      // ...kits[prod][key],
-      // volume: event.target.valueAsNumber
-    )
+    kitState[prod][key] = Object.assign(kitState[prod][key], { detune: event.target.valueAsNumber })
   })
 }
 
 const onChangeKeyReverb = (event, key) => {
+  kits[key] = new Wad(
+    Object.assign(kitState[producer][key],
+      { reverb:
+        { wet: event.target.valueAsNumber,
+          impulse: 'public/CementBlocks1.wav'}
+      }
+    )
+    // ...kits[prod][key],
+    // detune: event.target.valueAsNumber
+  )
   producers.forEach(prod => {
-    // kits[prod][key] = new Wad({
-    //   source: kits[prod][key].source,
-    //   volume: kits[prod][key].volume,
-    //   detune: kits[prod][key].detune,
-    //   reverb: {
-    //     wet: event.target.valueAsNumber,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   },
-    //   filter: {
-    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-    //   }
-    // })
-    // kits[prod][key] = new Wad({
-    //   ...kits[prod][key],
-    //   reverb: {
-    //     wet: event.target.valueAsNumber,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   }
-    // })
-    kits[prod][key] = new Wad(
-      Object.assign(kits[prod][key],
-        { reverb:
-          { wet: event.target.valueAsNumber,
-            impulse: 'public/CementBlocks1.wav'}
-        }
-      )
-      // ...kits[prod][key],
-      // volume: event.target.valueAsNumber
+    kitState[prod][key] = Object.assign(kitState[prod][key],
+      { reverb:
+        { wet: event.target.valueAsNumber,
+          impulse: 'public/CementBlocks1.wav'}
+      }
     )
   })
 }
 
 const onChangeKeyFilter = (event, key) => {
-  console.log('filter freq', kits[producer][key].filter.frequency)
-  console.log('filter type', kits[producer][key].filter.type)
-  producers.forEach(prod => {
-    // kits[prod][key] = new Wad({
-    //   source: kits[prod][key].source,
-    //   volume: kits[prod][key].volume,
-    //   detune: kits[prod][key].detune,
-    //   reverb: {
-    //     wet: kits[prod][key].reverb.wet,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   },
-    //   filter: {
-    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-    //     frequency: event.target.valueAsNumber, // The frequency, in hertz, to which the filter is applied.
-    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-    //   }
-    // })
-    // kits[prod][key] = new Wad({
-    //   ...kits[prod][key],
-    //   filter: {
-    //     frequency: event.target.valueAsNumber
-    //   }
-    // })
-    kits[prod][key] = new Wad(
-      Object.assign(kits[prod][key],
-        { filter:
-          { type: 'lowpass',
-            frequency: event.target.valueAsNumber
-          }
+  kits[key] = new Wad(
+    Object.assign(kitState[producer][key],
+      { filter:
+        { type: 'lowpass',
+          frequency: event.target.valueAsNumber
         }
-      )
-      // ...kits[prod][key],
-      // volume: event.target.valueAsNumber
+      }
+    )
+    // ...kits[prod][key],
+    // detune: event.target.valueAsNumber
+  )
+  producers.forEach(prod => {
+    kitState[prod][key] = Object.assign(kitState[prod][key],
+      { filter:
+        { type: 'lowpass',
+          frequency: event.target.valueAsNumber
+        }
+      }
     )
   })
-  console.log('filter freq after freq change func', kits[producer][key].filter.frequency)
-  console.log('filter type after freq change func', kits[producer][key].filter.type)
-  console.log('kit producer key', kits[producer][key])
 }
 
 const onChangeKeyFilterType = (event, key) => {
-  console.log('key filter type', event.target.value)
+  kits[key] = new Wad(
+    Object.assign(kitState[producer][key],
+      { filter:
+        { type: 'lowpass',
+          frequency: event.target.valueAsNumber
+        }
+      }
+    )
+    // ...kits[prod][key],
+    // detune: event.target.valueAsNumber
+  )
   producers.forEach(prod => {
-    console.log('key filter type', event.target.value)
-    // kits[prod][key] = new Wad({
-    //   source: kits[prod][key].source,
-    //   volume: kits[prod][key].volume,
-    //   detune: kits[prod][key].detune,
-    //   reverb: {
-    //     wet: kits[prod][key].reverb.wet,
-    //     impulse: 'public/CementBlocks1.wav'
-    //   },
-    //   filter: {
-    //     type: event.target.value, // What type of filter is applied.
-    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-    //   }
-    // })
-    // kits[prod][key] = new Wad({
-    //   ...kits[prod][key],
-    //   filter: {
-    //     type: event.target.value
-    //   }
-    // })
+    kitState[prod][key] = Object.assign(kitState[prod][key],
+      { filter:
+        { type: 'lowpass',
+          frequency: event.target.valueAsNumber
+        }
+      }
+    )
   })
-  console.log('kit producer key', kits[producer][key].filter[0].frequency)
+  console.log('kit producer key', kits[key].filter[0].frequency)
 }
 
 const onSelectLoop = event => {
@@ -1234,6 +1160,26 @@ const onSelectCustomOneShotS = event => {
 
 const onClickProducer = (selectedProducer) => {
   producer = selectedProducer
+  kits = {
+    loop1:
+      new Wad(kitState[producer].loop1),
+    loop2:
+      new Wad(kitState[producer].loop2),
+    loop3:
+      new Wad(kitState[producer].loop3),
+    s:
+      new Wad(kitState[producer].s),
+    d:
+      new Wad(kitState[producer].d),
+    f:
+      new Wad(kitState[producer].f),
+    j:
+      new Wad(kitState[producer].j),
+    k:
+      new Wad(kitState[producer].k),
+    l:
+      new Wad(kitState[producer].l)
+  }
   const dormantProducers = producers.filter(x => x !== selectedProducer)
   dormantProducers.forEach(dormantProducer => {
     $(`#${dormantProducer}-text`).removeClass('selected')
@@ -1358,12 +1304,12 @@ const addHandlers = () => {
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
   $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', onSelectCustomOneShotS)
-  $('#s').on('click', () => kits[producer].s.play())
-  $('#d').on('click', () => kits[producer].d.play())
-  $('#f').on('click', () => kits[producer].f.play())
-  $('#j').on('click', () => kits[producer].j.play())
-  $('#k').on('click', () => kits[producer].k.play())
-  $('#l').on('click', () => kits[producer].l.play())
+  $('#s').on('click', () => kits.s.play())
+  $('#d').on('click', () => kits.d.play())
+  $('#f').on('click', () => kits.f.play())
+  $('#j').on('click', () => kits.j.play())
+  $('#k').on('click', () => kits.k.play())
+  $('#l').on('click', () => kits.l.play())
   $('#oneShot-uploader').on('submit', uploadOneShot)
   $('#sound-uploader').on('submit', event => {
     event.preventDefault()
