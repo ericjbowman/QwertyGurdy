@@ -603,7 +603,9 @@ const onkeyUp = event => {
 }
 
 const onChangeVolume = event => {
-  customLoop.setVolume(event.target.valueAsNumber)
+  if (producer === 'Custom') {
+    customLoop.setVolume(event.target.valueAsNumber)
+  }
   kits[loop].setVolume(event.target.valueAsNumber)
   state.volume = event.target.valueAsNumber
   producers.forEach(x => {
@@ -618,16 +620,14 @@ const onChangeVolume = event => {
 // }
 
 const onChangeDetune = event => {
-  state.detune = event.target.valueAsNumber
-  producers.forEach(x => {
-    kits[x][loop].detune = (event.target.valueAsNumber)
-  })
-  if (producer !== 'Custom') {
-    kits[loop].setDetune(event.target.valueAsNumber)
-    console.log('event', event.target.valueAsNumber)
-  } else {
+  if (producer === 'Custom') {
     customLoop.setDetune(event.target.valueAsNumber)
   }
+  state.detune = event.target.valueAsNumber
+  producers.forEach(x => {
+    kitState[x][loop].detune = (event.target.valueAsNumber)
+  })
+  kits[loop].setDetune(event.target.valueAsNumber)
 }
 
 const onChangeKeyVolume = (event, key) => {
