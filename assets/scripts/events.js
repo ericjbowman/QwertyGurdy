@@ -428,7 +428,7 @@ const kitState = {
         volume: 0.5
       },
     s:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/48025856512341325`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -436,7 +436,7 @@ const kitState = {
           }
       },
     d:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/2851370962708084`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -444,7 +444,7 @@ const kitState = {
           }
       },
     f:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/11095957366424303`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -452,7 +452,7 @@ const kitState = {
           }
       },
     j:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/6454482876346834`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -460,7 +460,7 @@ const kitState = {
           }
       },
     k:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/503562328715875`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -468,7 +468,7 @@ const kitState = {
           }
       },
     l:
-      { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/1682637573742103`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -737,13 +737,13 @@ const setCustomOneShot = (key, url) => {
   kits[key] = new Wad(Object.assign(kitState[producer][key], { source: url })
   )
   kitState[producer][key].source = url
-  console.log('custom oneShot', kits[producer][key].source)
+  console.log('custom oneShot', kitState[producer][key].source)
 }
 
 const onSelectCustomOneShot = (key, event) => {
   setCustomOneShot(key, event.target.value)
   state.oneShotUrl = event.target.value
-  console.log('onSelectCustomOneShot triggered')
+  // console.log('onSelectCustomOneShot triggered')
 }
 
 const onClickProducer = (selectedProducer) => {
@@ -914,12 +914,12 @@ const addHandlers = () => {
 
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
-  $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', (event) => onSelectCustomOneShot('s', event))
-  $('#d-handlebar-oneShots').on('change', '.d-oneShot-select', (event) => onSelectCustomOneShot('d', event))
-  $('#f-handlebar-oneShots').on('change', '.f-oneShot-select', (event) => onSelectCustomOneShot('f', event))
-  $('#j-handlebar-oneShots').on('change', '.j-oneShot-select', (event) => onSelectCustomOneShot('j', event))
-  $('#k-handlebar-oneShots').on('change', '.k-oneShot-select', (event) => onSelectCustomOneShot('k', event))
-  $('#l-handlebar-oneShots').on('change', '.l-oneShot-select', (event) => onSelectCustomOneShot('l', event))
+  // $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', (event) => onSelectCustomOneShot('s', event))
+  // $('#d-handlebar-oneShots').on('change', '.d-oneShot-select', (event) => onSelectCustomOneShot('d', event))
+  // $('#f-handlebar-oneShots').on('change', '.f-oneShot-select', (event) => onSelectCustomOneShot('f', event))
+  // $('#j-handlebar-oneShots').on('change', '.j-oneShot-select', (event) => onSelectCustomOneShot('j', event))
+  // $('#k-handlebar-oneShots').on('change', '.k-oneShot-select', (event) => onSelectCustomOneShot('k', event))
+  // $('#l-handlebar-oneShots').on('change', '.l-oneShot-select', (event) => onSelectCustomOneShot('l', event))
 
   $('#s-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('s', event))
   $('#d-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('d', event))
