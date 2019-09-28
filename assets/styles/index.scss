@@ -344,6 +344,10 @@ label {
   padding-top: 1em;
 }
 
+.modal-loader {
+  position: relative;
+  margin-top: -35px;
+}
 .loader {
   position: relative;
   filter: hue-rotate(-120deg);

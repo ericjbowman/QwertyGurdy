@@ -871,6 +871,7 @@ const changeKeyParams = () => {
 
 const uploadOneShot = (key, event) => {
   event.preventDefault()
+  $('.modal-loader').show()
   const formData = new FormData(event.target)
 
   $.ajax({
@@ -884,6 +885,7 @@ const uploadOneShot = (key, event) => {
       setCustomOneShot(key, res.oneShot.url)
     })
     .then(() => indexAndShowOneShots(key))
+    .then(() => $('.modal-loader').hide())
     .catch(() => alert('failure'))
 }
 
@@ -898,6 +900,7 @@ const addHandlers = () => {
 
   $('#handlebar-uploads').hide()
   $('.handlebar-oneShots').hide()
+  $('.modal-loader').hide()
   $('.play-btn').on('click', playLoop)
   $('.stop-btn').on('click', stop)
   $('#Mr-Bill').on('click', () => onClickProducer('Mr-Bill'))

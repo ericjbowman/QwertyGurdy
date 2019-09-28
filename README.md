@@ -1,7 +1,7 @@
 # Qwerty Gurdy
 
 Qwerty Gurdy is a web application that allows the user to choose from
-several producers (Oliver, Pascaal, Torres/Rengifo, and Tennyson), play
+several producers (Mr. Bill, Oliver, Pascaal, Torres/Rengifo, and Tennyson), play
 3 of their loops, and play their samples with a computer keyboard. Users can
 manipulate the volume/speed of loops, and manipulate the volume, pitch,
 reverb, and filter of samples. Users can upload loops from their device
