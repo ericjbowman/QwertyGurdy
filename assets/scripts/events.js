@@ -3,7 +3,7 @@ const config = require('./config.js')
 const store = require('./store.js')
 const api = require('./api.js')
 const indexUploads = require('./templates/index-uploads.handlebars')
-const indexOneShots = require('./templates/index-oneShots.handlebars')
+// const indexOneShots = require('./templates/index-oneShots.handlebars')
 const indexSOneShots = require('./templates/index-s-oneShots.handlebars')
 const indexDOneShots = require('./templates/index-d-oneShots.handlebars')
 const indexFOneShots = require('./templates/index-f-oneShots.handlebars')
@@ -736,31 +736,15 @@ const onSelectCustomLoop = event => {
   console.log('event.target.value', event.target.value)
 }
 
-const setCustomOneShot = (letter, value) => {
-  kits.Custom[letter] = new Wad(
-    { source: value,
-      volume: kits.Custom.s.volume,
-      detune: kits.Custom.s.detune,
-      reverb: {
-        wet: kits.Custom.s.reverb.wet,
-        impulse: 'public/CementBlocks1.wav'
-      },
-      filter: {
-        type: kits.Custom.s.filter[0].type ? kits.Custom.s.filter[0].type : kits.Custom.s.filter.type, // What type of filter is applied.
-        frequency: kits.Custom.s.filter[0].frequency ? kits.Custom.s.filter[0].frequency : kits.Custom.s.filter.frequency, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-        // env: { // Filter envelope.
-        //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-        //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-        // }
-      }
-    }
+const setCustomOneShot = (key, url) => {
+  kits[key] = new Wad(Object.assign(kitState[producer][key], { source: url })
   )
+  kitState[producer][key].source = url
 }
 
-const onSelectCustomOneShotS = event => {
+const onSelectCustomOneShot = (key, event) => {
   console.log('custom one shot selected', event.target.value)
-  setCustomOneShot('s', event.target.value)
+  setCustomOneShot(key, event.target.value)
   // state.oneShotUrl = event.target.value
   console.log('event.target.value', event.target.value)
 }
@@ -844,6 +828,11 @@ const indexAndShowOneShots = () => {
   api.indexOneShots()
     .then((responseData) => {
       $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
+      $('#d-handlebar-oneShots').html(indexDOneShots({ oneShots: responseData.oneShots }))
+      $('#f-handlebar-oneShots').html(indexFOneShots({ oneShots: responseData.oneShots }))
+      $('#j-handlebar-oneShots').html(indexJOneShots({ oneShots: responseData.oneShots }))
+      $('#k-handlebar-oneShots').html(indexKOneShots({ oneShots: responseData.oneShots }))
+      $('#l-handlebar-oneShots').html(indexLOneShots({ oneShots: responseData.oneShots }))
       return responseData
     })
     .then((responseData) => {
@@ -851,7 +840,7 @@ const indexAndShowOneShots = () => {
       return responseData
     })
     .then(() => { state.oneShotUrl = store.oneShots[0].url })
-    .then(() => setCustomOneShot('s', store.oneShots[0].url))
+    // .then(() => setCustomOneShot('s', store.oneShots[0].url))
     .catch(console.log)
 }
 
@@ -866,7 +855,7 @@ const changeKeyParams = () => {
   })
 }
 
-const uploadOneShot = event => {
+const uploadOneShot = (key, event) => {
   event.preventDefault()
   const formData = new FormData(event.target)
   console.log('formData', formData.keys())
@@ -878,6 +867,12 @@ const uploadOneShot = event => {
     contentType: false,
     processData: false
   })
+    // .then((res) => console.log('response data', res))
+    .then(res => {
+      setCustomOneShot(key, res.oneShot.url)
+      return res
+    })
+    .then(res => console.log(res.oneShot.url))
     .then(console.log)
     .then(indexAndShowOneShots)
     .catch(() => alert('failure'))
@@ -910,14 +905,27 @@ const addHandlers = () => {
 
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
-  $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', onSelectCustomOneShotS)
+  $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', (event) => onSelectCustomOneShot('s', event))
+  $('#d-handlebar-oneShots').on('change', '.d-oneShot-select', (event) => onSelectCustomOneShot('d', event))
+  $('#f-handlebar-oneShots').on('change', '.f-oneShot-select', (event) => onSelectCustomOneShot('f', event))
+  $('#j-handlebar-oneShots').on('change', '.j-oneShot-select', (event) => onSelectCustomOneShot('j', event))
+  $('#k-handlebar-oneShots').on('change', '.k-oneShot-select', (event) => onSelectCustomOneShot('k', event))
+  $('#l-handlebar-oneShots').on('change', '.l-oneShot-select', (event) => onSelectCustomOneShot('l', event))
+
   $('#s').on('click', () => kits.s.play())
   $('#d').on('click', () => kits.d.play())
   $('#f').on('click', () => kits.f.play())
   $('#j').on('click', () => kits.j.play())
   $('#k').on('click', () => kits.k.play())
   $('#l').on('click', () => kits.l.play())
-  $('#oneShot-uploader').on('submit', uploadOneShot)
+
+  $('#s-oneShot-uploader').on('submit', event => uploadOneShot('s', event))
+  $('#d-oneShot-uploader').on('submit', event => uploadOneShot('d', event))
+  $('#f-oneShot-uploader').on('submit', event => uploadOneShot('f', event))
+  $('#j-oneShot-uploader').on('submit', event => uploadOneShot('j', event))
+  $('#k-oneShot-uploader').on('submit', event => uploadOneShot('k', event))
+  $('#l-oneShot-uploader').on('submit', event => uploadOneShot('l', event))
+
   $('#sound-uploader').on('submit', event => {
     event.preventDefault()
     $('.loader').show()
