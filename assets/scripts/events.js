@@ -737,11 +737,13 @@ const setCustomOneShot = (key, url) => {
   kits[key] = new Wad(Object.assign(kitState[producer][key], { source: url })
   )
   kitState[producer][key].source = url
+  console.log('custom oneShot', kits[producer][key].source)
 }
 
 const onSelectCustomOneShot = (key, event) => {
   setCustomOneShot(key, event.target.value)
-  // state.oneShotUrl = event.target.value
+  state.oneShotUrl = event.target.value
+  console.log('onSelectCustomOneShot triggered')
 }
 
 const onClickProducer = (selectedProducer) => {
@@ -835,6 +837,7 @@ const indexAndShowOneShots = key => {
     case 'l': indexKeyOneShots = indexLOneShots
       break
   }
+
   api.indexOneShots()
     .then((responseData) => {
       // $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
@@ -917,6 +920,13 @@ const addHandlers = () => {
   $('#j-handlebar-oneShots').on('change', '.j-oneShot-select', (event) => onSelectCustomOneShot('j', event))
   $('#k-handlebar-oneShots').on('change', '.k-oneShot-select', (event) => onSelectCustomOneShot('k', event))
   $('#l-handlebar-oneShots').on('change', '.l-oneShot-select', (event) => onSelectCustomOneShot('l', event))
+
+  $('#s-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('s', event))
+  $('#d-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('d', event))
+  $('#f-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('f', event))
+  $('#j-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('j', event))
+  $('#k-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('k', event))
+  $('#l-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('l', event))
 
   $('#s').on('click', () => kits.s.play())
   $('#d').on('click', () => kits.d.play())
