@@ -52,27 +52,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare4.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillHat1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare3.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
   },
   // PointPoint: {
@@ -144,27 +168,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
-        volume: 0.6
+        volume: 0.6,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc3.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
-        volume: 0.3
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
   },
   Tennyson: {
@@ -185,27 +233,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
-        volume: 0.3
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
   },
   Oliver: {
@@ -226,27 +298,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
 
   },
@@ -268,27 +364,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoKick1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoTom1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoHat1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoRim1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
   },
   Custom: {
@@ -309,27 +429,51 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
-        volume: 0.3
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
-        volume: 0.3
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
-        volume: 0.5
+        volume: 0.5,
+        filter:
+          { type: 'lowpass',
+            frequency: 20000
+          }
       }
 
   }
@@ -533,7 +677,7 @@ const onChangeKeyFilter = (event, key) => {
   kits[key] = new Wad(
     Object.assign(kitState[producer][key],
       { filter:
-        { type: 'lowpass',
+        { type: kitState[producer][key].filter.type,
           frequency: event.target.valueAsNumber
         }
       }
@@ -544,7 +688,7 @@ const onChangeKeyFilter = (event, key) => {
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key],
       { filter:
-        { type: 'lowpass',
+        { type: kitState[producer][key].filter.type,
           frequency: event.target.valueAsNumber
         }
       }
@@ -556,8 +700,8 @@ const onChangeKeyFilterType = (event, key) => {
   kits[key] = new Wad(
     Object.assign(kitState[producer][key],
       { filter:
-        { type: 'lowpass',
-          frequency: event.target.valueAsNumber
+        { type: event.target.value,
+          frequency: kitState[producer][key].filter.frequency
         }
       }
     )
@@ -567,8 +711,8 @@ const onChangeKeyFilterType = (event, key) => {
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key],
       { filter:
-        { type: 'lowpass',
-          frequency: event.target.valueAsNumber
+        { type: event.target.value,
+          frequency: kitState[prod][key].filter.frequency
         }
       }
     )
