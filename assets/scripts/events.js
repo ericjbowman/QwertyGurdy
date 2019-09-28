@@ -52,111 +52,27 @@ const kitState = {
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare4.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillHat1.wav`,
-        volume: 0.4,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare3.wav`,
-        volume: 0.4,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       }
   },
   // PointPoint: {
@@ -213,392 +129,124 @@ const kitState = {
     loop1:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
         loop: true,
-        volume: 0.5,
-        detune: 0,
-        rate: 1
+        volume: 0.5
       },
     loop2:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop2.wav`,
         loop: true,
         volume: 0.5,
-        detune: 0,
-        rate: 1
+        detune: 0
       },
     loop3:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop3.wav`,
         loop: true,
-        volume: 0.5,
-        detune: 0,
-        rate: 1
+        volume: 0.5
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
-        volume: 0.6,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.6
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc3.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.3
       }
-
   },
   Tennyson: {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop1.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop2.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop3.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.3
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
-        volume: 0.5,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       }
   },
   Oliver: {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop1.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverTom1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
-        // reverb: {
-        //   wet: 0.5,
-        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-        // }
-        // Reverb slows everything down interfering with sound rendering
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverSnare1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverHat2.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverPerc2.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       }
 
   },
@@ -606,267 +254,82 @@ const kitState = {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop1.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop4.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop3.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoKick1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoTom1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
-        // reverb: {
-        //   wet: 0.5,
-        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-        // }
-        // Reverb slows everything down interfering with sound rendering
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoHat1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoRim1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc2.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       }
-
   },
   Custom: {
     loop1:
       { source: state.url,
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
         loop: true,
-        volume: 0.5,
-        rate: 1
+        volume: 0.5
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     d:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonTom1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
-        // reverb: {
-        //   wet: 0.5,
-        //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-        // }
-        // Reverb slows everything down interfering with sound rendering
+        volume: 0.5
       },
     f:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonSnare1.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       },
     j:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonHat1.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.3
       },
     k:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc1.wav`,
-        volume: 0.3,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.3
       },
     l:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonPerc2.wav`,
-        volume: 0.5,
-        detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
-        filter: {
-          type: 'lowpass', // What type of filter is applied.
-          frequency: 20000, // The frequency, in hertz, to which the filter is applied.
-          q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-          // env: { // Filter envelope.
-          //   frequency: 800, // If this is set, filter frequency will slide from filter.frequency to filter.env.frequency when a note is triggered.
-          //   attack: 0.1 // Time in seconds for the filter frequency to slide from filter.frequency to filter.env.frequency
-          // }
-        }
+        volume: 0.5
       }
 
   }
