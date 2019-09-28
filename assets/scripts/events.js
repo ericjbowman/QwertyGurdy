@@ -36,19 +36,19 @@ const kitState = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop1.wav`,
         loop: true,
         volume: 0.5,
-        rate: 1
+        detune: 0
       },
     loop2:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop2.wav`,
         loop: true,
         volume: 0.5,
-        rate: 1
+        detune: 0
       },
     loop3:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillLoop3.wav`,
         loop: true,
         volume: 0.5,
-        rate: 1
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
@@ -153,7 +153,8 @@ const kitState = {
     loop1:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop2:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop2.wav`,
@@ -164,7 +165,8 @@ const kitState = {
     loop3:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop3.wav`,
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
@@ -219,17 +221,20 @@ const kitState = {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop1.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop2.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonLoop3.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Tennyson/TennysonKick1.wav`,
@@ -284,17 +289,20 @@ const kitState = {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop1.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Oliver/OliverKick1.wav`,
@@ -350,17 +358,20 @@ const kitState = {
     loop1:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop1.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop2:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop4.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop3:
       { source: 'https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoLoop3.wav',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoKick1.wav`,
@@ -415,17 +426,20 @@ const kitState = {
     loop1:
       { source: state.url,
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop2:
       { source: '',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     loop3:
       { source: '',
         loop: true,
-        volume: 0.5
+        volume: 0.5,
+        detune: 0
       },
     s:
       { source: `https://bowmansbucket.s3.amazonaws.com/48025856512341325`,
@@ -519,6 +533,7 @@ const playLoop = () => {
     $('.play-btn').addClass('stop')
     if (producer !== 'Custom') {
       Wad.stopAll()
+      kits[loop] = new Wad(kitState[producer][loop])
       kits[loop].play(
         { loop: true,
           volume: state.volume
@@ -606,10 +621,14 @@ const onChangeVolume = event => {
   if (producer === 'Custom') {
     customLoop.setVolume(event.target.valueAsNumber)
   }
-  kits[loop].setVolume(event.target.valueAsNumber)
+  kits.loop1.setVolume(event.target.valueAsNumber)
+  kits.loop2.setVolume(event.target.valueAsNumber)
+  kits.loop3.setVolume(event.target.valueAsNumber)
   state.volume = event.target.valueAsNumber
   producers.forEach(x => {
-    kits[x][loop].volume = (event.target.valueAsNumber)
+    kitState[x].loop1.volume = (event.target.valueAsNumber)
+    kitState[x].loop2.volume = (event.target.valueAsNumber)
+    kitState[x].loop3.volume = (event.target.valueAsNumber)
   })
 }
 
@@ -617,6 +636,7 @@ const onChangeVolume = event => {
 //   kits.PointPoint.loop.setRate(event.target.valueAsNumber)
 //   console.log('event', event.target.valueAsNumber)
 // }
+const loops = ['loop1', 'loop2', 'loop3']
 
 const onChangeDetune = event => {
   if (producer === 'Custom') {
@@ -624,9 +644,15 @@ const onChangeDetune = event => {
   }
   state.detune = event.target.valueAsNumber
   producers.forEach(x => {
-    kitState[x][loop].detune = (event.target.valueAsNumber)
+    kitState[x].loop1.detune = (event.target.valueAsNumber)
+    kitState[x].loop2.detune = (event.target.valueAsNumber)
+    kitState[x].loop3.detune = (event.target.valueAsNumber)
   })
   kits[loop].setDetune(event.target.valueAsNumber)
+  const unSelectedLoops = loops.filter(indiLoop => indiLoop !== loop)
+  unSelectedLoops.forEach(indiLoop => {
+    kits[indiLoop] = new Wad(kitState[producer][indiLoop])
+  })
 }
 
 const onChangeKeyVolume = (event, key) => {
