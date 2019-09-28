@@ -1050,10 +1050,11 @@ const onChangeKeyVolume = (event, key) => {
     //   },
     //   volume: event.target.valueAsNumber
     // })
-    kits[prod][key] = new Wad({
-      ...kits[prod][key],
-      volume: event.target.valueAsNumber
-    })
+    kits[prod][key] = new Wad(
+      Object.assign(kits[prod][key], { volume: event.target.valueAsNumber })
+      // ...kits[prod][key],
+      // volume: event.target.valueAsNumber
+    )
   })
 }
 
@@ -1073,10 +1074,11 @@ const onChangeKeyDetune = (event, key) => {
     //   },
     //   detune: event.target.valueAsNumber
     // })
-    kits[prod][key] = new Wad({
-      ...kits[prod][key],
-      detune: event.target.valueAsNumber
-    })
+    kits[prod][key] = new Wad(
+      Object.assign(kits[prod][key], { detune: event.target.valueAsNumber })
+      // ...kits[prod][key],
+      // volume: event.target.valueAsNumber
+    )
   })
 }
 
@@ -1096,13 +1098,23 @@ const onChangeKeyReverb = (event, key) => {
     //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
     //   }
     // })
-    kits[prod][key] = new Wad({
-      ...kits[prod][key],
-      reverb: {
-        wet: event.target.valueAsNumber,
-        impuls: 'public/CementBlocks1.wav'
-      }
-    })
+    // kits[prod][key] = new Wad({
+    //   ...kits[prod][key],
+    //   reverb: {
+    //     wet: event.target.valueAsNumber,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   }
+    // })
+    kits[prod][key] = new Wad(
+      Object.assign(kits[prod][key],
+        { reverb:
+          { wet: event.target.valueAsNumber,
+            impulse: 'public/CementBlocks1.wav'}
+        }
+      )
+      // ...kits[prod][key],
+      // volume: event.target.valueAsNumber
+    )
   })
 }
 
@@ -1124,12 +1136,23 @@ const onChangeKeyFilter = (event, key) => {
     //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
     //   }
     // })
-    kits[prod][key] = new Wad({
-      ...kits[prod][key],
-      filter: {
-        frequency: event.target.valueAsNumber
-      }
-    })
+    // kits[prod][key] = new Wad({
+    //   ...kits[prod][key],
+    //   filter: {
+    //     frequency: event.target.valueAsNumber
+    //   }
+    // })
+    kits[prod][key] = new Wad(
+      Object.assign(kits[prod][key],
+        { filter:
+          { type: 'lowpass',
+            frequency: event.target.valueAsNumber
+          }
+        }
+      )
+      // ...kits[prod][key],
+      // volume: event.target.valueAsNumber
+    )
   })
   console.log('filter freq after freq change func', kits[producer][key].filter.frequency)
   console.log('filter type after freq change func', kits[producer][key].filter.type)
@@ -1139,6 +1162,7 @@ const onChangeKeyFilter = (event, key) => {
 const onChangeKeyFilterType = (event, key) => {
   console.log('key filter type', event.target.value)
   producers.forEach(prod => {
+    console.log('key filter type', event.target.value)
     // kits[prod][key] = new Wad({
     //   source: kits[prod][key].source,
     //   volume: kits[prod][key].volume,
@@ -1153,12 +1177,12 @@ const onChangeKeyFilterType = (event, key) => {
     //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
     //   }
     // })
-    kits[prod][key] = new Wad({
-      ...kits[prod][key],
-      filter: {
-        type: event.target.value
-      }
-    })
+    // kits[prod][key] = new Wad({
+    //   ...kits[prod][key],
+    //   filter: {
+    //     type: event.target.value
+    //   }
+    // })
   })
   console.log('kit producer key', kits[producer][key].filter[0].frequency)
 }
