@@ -3,7 +3,7 @@ const config = require('./config.js')
 const store = require('./store.js')
 const api = require('./api.js')
 const indexUploads = require('./templates/index-uploads.handlebars')
-// const indexOneShots = require('./templates/index-oneShots.handlebars')
+const indexOneShots = require('./templates/index-oneShots.handlebars')
 const indexSOneShots = require('./templates/index-s-oneShots.handlebars')
 const indexDOneShots = require('./templates/index-d-oneShots.handlebars')
 const indexFOneShots = require('./templates/index-f-oneShots.handlebars')
@@ -418,12 +418,12 @@ const kitState = {
         volume: 0.5
       },
     loop2:
-      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop2.wav',
+      { source: '',
         loop: true,
         volume: 0.5
       },
     loop3:
-      { source: 'https://bowmansbucket.s3.amazonaws.com/Oliver/OliverLoop3.wav',
+      { source: '',
         loop: true,
         volume: 0.5
       },
@@ -611,7 +611,6 @@ const onChangeVolume = event => {
   producers.forEach(x => {
     kits[x][loop].volume = (event.target.valueAsNumber)
   })
-  console.log('event', event.target.valueAsNumber)
 }
 
 // const onChangeRate = event => {
@@ -717,7 +716,6 @@ const onChangeKeyFilterType = (event, key) => {
       }
     )
   })
-  console.log('kit producer key', kits[key].filter[0].frequency)
 }
 
 const onSelectLoop = event => {
@@ -733,7 +731,6 @@ const onSelectLoop = event => {
 
 const onSelectCustomLoop = event => {
   state.url = event.target.value
-  console.log('event.target.value', event.target.value)
 }
 
 const setCustomOneShot = (key, url) => {
@@ -743,10 +740,8 @@ const setCustomOneShot = (key, url) => {
 }
 
 const onSelectCustomOneShot = (key, event) => {
-  console.log('custom one shot selected', event.target.value)
   setCustomOneShot(key, event.target.value)
   // state.oneShotUrl = event.target.value
-  console.log('event.target.value', event.target.value)
 }
 
 const onClickProducer = (selectedProducer) => {
@@ -824,15 +819,31 @@ const indexAndShowUploads = () => {
     .catch(console.log)
 }
 
-const indexAndShowOneShots = () => {
+const indexAndShowOneShots = key => {
+  let indexKeyOneShots = () => {}
+  switch (key) {
+    case 's': indexKeyOneShots = indexSOneShots
+      break
+    case 'd': indexKeyOneShots = indexDOneShots
+      break
+    case 'f': indexKeyOneShots = indexFOneShots
+      break
+    case 'j': indexKeyOneShots = indexJOneShots
+      break
+    case 'k': indexKeyOneShots = indexKOneShots
+      break
+    case 'l': indexKeyOneShots = indexLOneShots
+      break
+  }
   api.indexOneShots()
     .then((responseData) => {
-      $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
-      $('#d-handlebar-oneShots').html(indexDOneShots({ oneShots: responseData.oneShots }))
-      $('#f-handlebar-oneShots').html(indexFOneShots({ oneShots: responseData.oneShots }))
-      $('#j-handlebar-oneShots').html(indexJOneShots({ oneShots: responseData.oneShots }))
-      $('#k-handlebar-oneShots').html(indexKOneShots({ oneShots: responseData.oneShots }))
-      $('#l-handlebar-oneShots').html(indexLOneShots({ oneShots: responseData.oneShots }))
+      // $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
+      // $('#d-handlebar-oneShots').html(indexDOneShots({ oneShots: responseData.oneShots }))
+      // $('#f-handlebar-oneShots').html(indexFOneShots({ oneShots: responseData.oneShots }))
+      // $('#j-handlebar-oneShots').html(indexJOneShots({ oneShots: responseData.oneShots }))
+      // $('#k-handlebar-oneShots').html(indexKOneShots({ oneShots: responseData.oneShots }))
+      // $('#l-handlebar-oneShots').html(indexLOneShots({ oneShots: responseData.oneShots }))
+      $(`#${key}-handlebar-oneShots`).html(indexKeyOneShots({ oneShots: responseData.oneShots.reverse() }))
       return responseData
     })
     .then((responseData) => {
@@ -858,7 +869,6 @@ const changeKeyParams = () => {
 const uploadOneShot = (key, event) => {
   event.preventDefault()
   const formData = new FormData(event.target)
-  console.log('formData', formData.keys())
 
   $.ajax({
     method: 'POST',
@@ -867,14 +877,10 @@ const uploadOneShot = (key, event) => {
     contentType: false,
     processData: false
   })
-    // .then((res) => console.log('response data', res))
     .then(res => {
       setCustomOneShot(key, res.oneShot.url)
-      return res
     })
-    .then(res => console.log(res.oneShot.url))
-    .then(console.log)
-    .then(indexAndShowOneShots)
+    .then(() => indexAndShowOneShots(key))
     .catch(() => alert('failure'))
 }
 
@@ -885,7 +891,7 @@ const addHandlers = () => {
   httpRequest.send()
 
   indexAndShowUploads()
-  indexAndShowOneShots()
+  // indexAndShowOneShots()
 
   $('#handlebar-uploads').hide()
   $('.handlebar-oneShots').hide()
@@ -938,7 +944,6 @@ const addHandlers = () => {
     // console.log('form fields', formFields)
     const formData = new FormData(event.target)
     // console.log('event target isLoop', event.target.value)
-    console.log('formData', formData.values())
 
     // let type = ''
     // if ($('#is-loop').prop('checked', true)) {
@@ -966,6 +971,24 @@ const addHandlers = () => {
   })
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
+
+  api.indexOneShots()
+    .then((responseData) => {
+      $('#s-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.reverse() }))
+      $('#d-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      $('#f-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      $('#j-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      $('#k-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      $('#l-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      return responseData
+    })
+    .then((responseData) => {
+      store.oneShots = responseData.oneShots
+      return responseData
+    })
+    .then(() => { state.oneShotUrl = store.oneShots[0].url })
+    // .then(() => setCustomOneShot('s', store.oneShots[0].url))
+    .catch(console.log)
 }
 
 module.exports = {
