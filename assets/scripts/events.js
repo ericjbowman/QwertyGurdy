@@ -54,10 +54,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -73,10 +73,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -92,10 +92,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare4.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -111,10 +111,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillHat1.wav`,
         volume: 0.4,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -130,10 +130,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc1.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -149,10 +149,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillSnare3.wav`,
         volume: 0.4,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -241,10 +241,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalKick1.wav`,
         volume: 0.6,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -260,10 +260,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalTom.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -279,10 +279,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalSnare1.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -298,10 +298,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalHat1.wav`,
         volume: 0.3,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -317,10 +317,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc3.wav`,
         volume: 0.5,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -336,10 +336,10 @@ const kits = {
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalPerc2.wav`,
         volume: 0.3,
         detune: 0,
-        reverb: {
-          wet: 0,
-          impulse: 'public/CementBlocks1.wav'
-        },
+        // reverb: {
+        //   wet: 0,
+        //   impulse: 'public/CementBlocks1.wav'
+        // },
         filter: {
           type: 'lowpass', // What type of filter is applied.
           frequency: 20000, // The frequency, in hertz, to which the filter is applied.
@@ -1036,18 +1036,22 @@ const onChangeDetune = event => {
 
 const onChangeKeyVolume = (event, key) => {
   producers.forEach(prod => {
-    kits[producer][key] = new Wad({
-      source: kits[producer][key].source,
-      detune: kits[producer][key].detune,
-      reverb: {
-        wet: kits[producer][key].reverb.wet,
-        impulse: 'public/CementBlocks1.wav'
-      },
-      filter: {
-        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-      },
+    // kits[producer][key] = new Wad({
+    //   source: kits[producer][key].source,
+    //   detune: kits[producer][key].detune,
+    //   reverb: {
+    //     wet: kits[producer][key].reverb.wet,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   },
+    //   filter: {
+    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+    //   },
+    //   volume: event.target.valueAsNumber
+    // })
+    kits[prod][key] = new Wad({
+      ...kits[prod][key],
       volume: event.target.valueAsNumber
     })
   })
@@ -1055,18 +1059,22 @@ const onChangeKeyVolume = (event, key) => {
 
 const onChangeKeyDetune = (event, key) => {
   producers.forEach(prod => {
-    kits[producer][key] = new Wad({
-      source: kits[producer][key].source,
-      volume: kits[producer][key].volume,
-      reverb: {
-        wet: kits[producer][key].reverb.wet,
-        impulse: 'public/CementBlocks1.wav'
-      },
-      filter: {
-        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
-      },
+    // kits[producer][key] = new Wad({
+    //   source: kits[producer][key].source,
+    //   volume: kits[producer][key].volume,
+    //   reverb: {
+    //     wet: kits[producer][key].reverb.wet,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   },
+    //   filter: {
+    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+    //   },
+    //   detune: event.target.valueAsNumber
+    // })
+    kits[prod][key] = new Wad({
+      ...kits[prod][key],
       detune: event.target.valueAsNumber
     })
   })
@@ -1074,18 +1082,25 @@ const onChangeKeyDetune = (event, key) => {
 
 const onChangeKeyReverb = (event, key) => {
   producers.forEach(prod => {
+    // kits[prod][key] = new Wad({
+    //   source: kits[prod][key].source,
+    //   volume: kits[prod][key].volume,
+    //   detune: kits[prod][key].detune,
+    //   reverb: {
+    //     wet: event.target.valueAsNumber,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   },
+    //   filter: {
+    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+    //   }
+    // })
     kits[prod][key] = new Wad({
-      source: kits[prod][key].source,
-      volume: kits[prod][key].volume,
-      detune: kits[prod][key].detune,
+      ...kits[prod][key],
       reverb: {
         wet: event.target.valueAsNumber,
-        impulse: 'public/CementBlocks1.wav'
-      },
-      filter: {
-        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+        impuls: 'public/CementBlocks1.wav'
       }
     })
   })
@@ -1095,18 +1110,24 @@ const onChangeKeyFilter = (event, key) => {
   console.log('filter freq', kits[producer][key].filter.frequency)
   console.log('filter type', kits[producer][key].filter.type)
   producers.forEach(prod => {
+    // kits[prod][key] = new Wad({
+    //   source: kits[prod][key].source,
+    //   volume: kits[prod][key].volume,
+    //   detune: kits[prod][key].detune,
+    //   reverb: {
+    //     wet: kits[prod][key].reverb.wet,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   },
+    //   filter: {
+    //     type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
+    //     frequency: event.target.valueAsNumber, // The frequency, in hertz, to which the filter is applied.
+    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+    //   }
+    // })
     kits[prod][key] = new Wad({
-      source: kits[prod][key].source,
-      volume: kits[prod][key].volume,
-      detune: kits[prod][key].detune,
-      reverb: {
-        wet: kits[prod][key].reverb.wet,
-        impulse: 'public/CementBlocks1.wav'
-      },
+      ...kits[prod][key],
       filter: {
-        type: kits[prod][key].filter[0].type ? kits[prod][key].filter[0].type : kits[prod][key].filter.type, // What type of filter is applied.
-        frequency: event.target.valueAsNumber, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+        frequency: event.target.valueAsNumber
       }
     })
   })
@@ -1118,18 +1139,24 @@ const onChangeKeyFilter = (event, key) => {
 const onChangeKeyFilterType = (event, key) => {
   console.log('key filter type', event.target.value)
   producers.forEach(prod => {
+    // kits[prod][key] = new Wad({
+    //   source: kits[prod][key].source,
+    //   volume: kits[prod][key].volume,
+    //   detune: kits[prod][key].detune,
+    //   reverb: {
+    //     wet: kits[prod][key].reverb.wet,
+    //     impulse: 'public/CementBlocks1.wav'
+    //   },
+    //   filter: {
+    //     type: event.target.value, // What type of filter is applied.
+    //     frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
+    //     q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+    //   }
+    // })
     kits[prod][key] = new Wad({
-      source: kits[prod][key].source,
-      volume: kits[prod][key].volume,
-      detune: kits[prod][key].detune,
-      reverb: {
-        wet: kits[prod][key].reverb.wet,
-        impulse: 'public/CementBlocks1.wav'
-      },
+      ...kits[prod][key],
       filter: {
-        type: event.target.value, // What type of filter is applied.
-        frequency: kits[prod][key].filter[0].frequency ? kits[prod][key].filter[0].frequency : kits[prod][key].filter.frequency, // The frequency, in hertz, to which the filter is applied.
-        q: 1 // Q-factor.  No one knows what this does. The default value is 1. Sensible values are from 0 to 10.
+        type: event.target.value
       }
     })
   })
