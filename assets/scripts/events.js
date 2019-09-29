@@ -10,9 +10,9 @@ const indexFOneShots = require('./templates/index-f-oneShots.handlebars')
 const indexJOneShots = require('./templates/index-j-oneShots.handlebars')
 const indexKOneShots = require('./templates/index-k-oneShots.handlebars')
 const indexLOneShots = require('./templates/index-l-oneShots.handlebars')
-// const getFormFields = require('../../lib/get-form-fields.js')
 
 let loop = 'loop1'
+let customLoop
 
 const state = {
   volume: 0.5,
@@ -99,56 +99,6 @@ const kitState = {
           }
       }
   },
-  // PointPoint: {
-  //   loop1:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop1.wav`,
-  //       loop: true,
-  //       volume: 0.5,
-  //       rate: 1
-  //     },
-  //   loop2:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop2.wav`,
-  //       loop: true,
-  //       volume: 0.5,
-  //       rate: 1
-  //     },
-  //   loop3:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPointLoop3.wav`,
-  //       loop: true,
-  //       volume: 0.5,
-  //       rate: 1
-  //     },
-  //   s:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint1.wav`,
-  //       volume: 0.5 }
-  //   ,
-  //   d:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint2.wav`,
-  //       volume: 0.5
-  //       // reverb: {
-  //       //   wet: 0.5,
-  //       //   impulse: 'https://bowmansbucket.s3.amazonaws.com/CementBlocks1.wav'
-  //       // }
-  //       // Reverb slows everything down interfering with sound rendering
-  //     }
-  //   ,
-  //   f:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint4.wav`,
-  //       volume: 0.5 }
-  //   ,
-  //   j:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint3.wav`,
-  //       volume: 0.3 }
-  //   ,
-  //   k:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint5.wav`,
-  //       volume: 0.5 }
-  //   ,
-  //   l:
-  //     { source: `https://bowmansbucket.s3.amazonaws.com/PointPoint/PointPoint6.wav`,
-  //       volume: 0.3 }
-  //
-  // },
   Pascaal: {
     loop1:
       { source: `https://bowmansbucket.s3.amazonaws.com/Pascaal/PascaalLoop1.wav`,
@@ -514,8 +464,6 @@ let kits = {
     new Wad(kitState[producer].l)
 }
 
-let customLoop
-
 const playLoop = () => {
   if (producer === 'Custom' && $('.play-btn').hasClass('play')) {
     customLoop = new Wad(
@@ -550,50 +498,6 @@ const playLoop = () => {
 const stop = () => {
   Wad.stopAll()
 }
-// const playSaw = () => {
-//   saw.stop()
-//   saw.play()
-// }
-// let detune = 0
-
-// const adjustStateVolume = event => {
-//   this.setState({
-//     [event.target.name]: {
-//       ...this.state[event.target.name],
-//       volume: event.target.value
-//     }
-//   })
-//   console.log('volume', this.state.pointLoop.volume)
-//   // Wad.setVolume(this.state.pointLoop.volume)
-// }
-// const adjustStateRate = event => {
-//   this.setState({
-//     [event.target.name]: {
-//       ...this.state[event.target.name],
-//       rate: event.target.value
-//     }
-//   })
-//   console.log('rate', this.state.pointLoop.rate)
-//   // Wad.setRate(this.state.pointLoop.rate)
-// }
-// const setVolume = (event) => {
-//   const promise = new Promise(function (resolve, reject) {
-//     resolve(adjustStateVolume(event))
-//   })
-//   promise
-//     .then(() => Wad.setVolume(this.state.pointLoop.volume))
-//     .then(() => console.log('from promise chain'))
-//     .catch(console.error)
-// }
-// const setRate = (event) => {
-//   const promise = new Promise(function (resolve, reject) {
-//     resolve(adjustStateRate(event))
-//   })
-//   promise
-//     .then(() => pointLoop.setRate(this.state.pointLoop.rate))
-//     .then(() => console.log('from promise chain'))
-//     .catch(console.error)
-// }
 
 const onkeyDown = event => {
   $(`#${event.keyCode}`).addClass('key-pressed')
@@ -640,26 +544,26 @@ const loops = ['loop1', 'loop2', 'loop3']
 
 const onChangeDetune = event => {
   if (producer === 'Custom') {
-    customLoop.setDetune(event.target.valueAsNumber)
+    if (customLoop.detune) {
+      customLoop.setDetune(event.target.valueAsNumber)
+    }
+  } else {
+    kits.loop1.setDetune(event.target.valueAsNumber)
+    kits.loop2.setDetune(event.target.valueAsNumber)
+    kits.loop3.setDetune(event.target.valueAsNumber)
   }
   state.detune = event.target.valueAsNumber
+  console.log('state', state)
   producers.forEach(x => {
     kitState[x].loop1.detune = (event.target.valueAsNumber)
     kitState[x].loop2.detune = (event.target.valueAsNumber)
     kitState[x].loop3.detune = (event.target.valueAsNumber)
-  })
-  kits[loop].setDetune(event.target.valueAsNumber)
-  const unSelectedLoops = loops.filter(indiLoop => indiLoop !== loop)
-  unSelectedLoops.forEach(indiLoop => {
-    kits[indiLoop] = new Wad(kitState[producer][indiLoop])
   })
 }
 
 const onChangeKeyVolume = (event, key) => {
   kits[key] = new Wad(
     Object.assign(kitState[producer][key], { volume: event.target.valueAsNumber })
-    // ...kits[prod][key],
-    // volume: event.target.valueAsNumber
   )
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key], { volume: event.target.valueAsNumber })
@@ -669,8 +573,6 @@ const onChangeKeyVolume = (event, key) => {
 const onChangeKeyDetune = (event, key) => {
   kits[key] = new Wad(
     Object.assign(kitState[producer][key], { detune: event.target.valueAsNumber })
-    // ...kits[prod][key],
-    // detune: event.target.valueAsNumber
   )
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key], { detune: event.target.valueAsNumber })
@@ -685,8 +587,6 @@ const onChangeKeyReverb = (event, key) => {
           impulse: 'public/CementBlocks1.wav'}
       }
     )
-    // ...kits[prod][key],
-    // detune: event.target.valueAsNumber
   )
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key],
@@ -707,8 +607,6 @@ const onChangeKeyFilter = (event, key) => {
         }
       }
     )
-    // ...kits[prod][key],
-    // detune: event.target.valueAsNumber
   )
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key],
@@ -730,8 +628,6 @@ const onChangeKeyFilterType = (event, key) => {
         }
       }
     )
-    // ...kits[prod][key],
-    // detune: event.target.valueAsNumber
   )
   producers.forEach(prod => {
     kitState[prod][key] = Object.assign(kitState[prod][key],
@@ -769,7 +665,6 @@ const setCustomOneShot = (key, url) => {
 const onSelectCustomOneShot = (key, event) => {
   setCustomOneShot(key, event.target.value)
   state.oneShotUrl = event.target.value
-  // console.log('onSelectCustomOneShot triggered')
 }
 
 const onClickProducer = (selectedProducer) => {
@@ -811,19 +706,6 @@ const onClickProducer = (selectedProducer) => {
   }
 }
 
-// const soundUpload = formData => {
-//   return $.ajax({
-//     method: 'POST',
-//     url: config.apiUrl + '/sounds',
-//     contentType: false, // you use this because StackOverFlow. but basically you just don't want jQuery to interfere, because we've already set the content type
-//     processData: false, // same here
-//     data: formData, // then we can just send it as is because it's already formatted
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
-
 const indexAndShowUploads = () => {
   api.indexUploads()
     .then((responseData) => {
@@ -844,6 +726,7 @@ const indexAndShowUploads = () => {
         }
       )
     })
+    .then(() => console.log('after index, customLoop is', customLoop))
     .catch(console.log)
 }
 
@@ -866,12 +749,6 @@ const indexAndShowOneShots = key => {
 
   api.indexOneShots()
     .then((responseData) => {
-      // $('#s-handlebar-oneShots').html(indexSOneShots({ oneShots: responseData.oneShots.reverse() }))
-      // $('#d-handlebar-oneShots').html(indexDOneShots({ oneShots: responseData.oneShots }))
-      // $('#f-handlebar-oneShots').html(indexFOneShots({ oneShots: responseData.oneShots }))
-      // $('#j-handlebar-oneShots').html(indexJOneShots({ oneShots: responseData.oneShots }))
-      // $('#k-handlebar-oneShots').html(indexKOneShots({ oneShots: responseData.oneShots }))
-      // $('#l-handlebar-oneShots').html(indexLOneShots({ oneShots: responseData.oneShots }))
       $(`#${key}-handlebar-oneShots`).html(indexKeyOneShots({ oneShots: responseData.oneShots.reverse() }))
       return responseData
     })
@@ -880,7 +757,6 @@ const indexAndShowOneShots = key => {
       return responseData
     })
     .then(() => { state.oneShotUrl = store.oneShots[0].url })
-    // .then(() => setCustomOneShot('s', store.oneShots[0].url))
     .catch(console.log)
 }
 
@@ -922,7 +798,6 @@ const addHandlers = () => {
   httpRequest.send()
 
   indexAndShowUploads()
-  // indexAndShowOneShots()
 
   $('#handlebar-uploads').hide()
   $('.handlebar-oneShots').hide()
@@ -943,12 +818,6 @@ const addHandlers = () => {
 
   $('.loops').on('change', onSelectLoop)
   $('#handlebar-uploads').on('change', '.custom-select', onSelectCustomLoop)
-  // $('#s-handlebar-oneShots').on('change', '.s-oneShot-select', (event) => onSelectCustomOneShot('s', event))
-  // $('#d-handlebar-oneShots').on('change', '.d-oneShot-select', (event) => onSelectCustomOneShot('d', event))
-  // $('#f-handlebar-oneShots').on('change', '.f-oneShot-select', (event) => onSelectCustomOneShot('f', event))
-  // $('#j-handlebar-oneShots').on('change', '.j-oneShot-select', (event) => onSelectCustomOneShot('j', event))
-  // $('#k-handlebar-oneShots').on('change', '.k-oneShot-select', (event) => onSelectCustomOneShot('k', event))
-  // $('#l-handlebar-oneShots').on('change', '.l-oneShot-select', (event) => onSelectCustomOneShot('l', event))
 
   $('#s-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('s', event))
   $('#d-handlebar-oneShots').on('change', '.oneShot-select', (event) => onSelectCustomOneShot('d', event))
@@ -974,22 +843,8 @@ const addHandlers = () => {
   $('#sound-uploader').on('submit', event => {
     event.preventDefault()
     $('.loader').show()
-    // const file = $('#test-file').prop('files')[0]
-    // console.log(file)
-    // const formData = {
-    //   file
-    // }
-    // const formFields = getFormFields(this)
-    // console.log('form fields', formFields)
-    const formData = new FormData(event.target)
-    // console.log('event target isLoop', event.target.value)
 
-    // let type = ''
-    // if ($('#is-loop').prop('checked', true)) {
-    //   type = 'loop'
-    // } else if ($('#not-loop').prop('checked', true)) {
-    //   type = 'not loop'
-    // }
+    const formData = new FormData(event.target)
 
     $.ajax({
       method: 'POST',
@@ -998,10 +853,6 @@ const addHandlers = () => {
       contentType: false,
       processData: false
     })
-      // .then(console.log)
-      // .then(apiResponse => {
-      //   $('#sound-display').html(`<audio controls src=${apiResponse.upload.url}></audio>`)
-      // })
       .then(console.log)
       .then(indexAndShowUploads)
       .then(() => onClickProducer('Custom'))
@@ -1026,7 +877,6 @@ const addHandlers = () => {
       return responseData
     })
     .then(() => { state.oneShotUrl = store.oneShots[0].url })
-    // .then(() => setCustomOneShot('s', store.oneShots[0].url))
     .catch(console.log)
 }
 
