@@ -523,12 +523,17 @@ const onkeyUp = event => {
 
 const onChangeVolume = event => {
   if (producer === 'Custom') {
-    customLoop.setVolume(event.target.valueAsNumber)
+    if (customLoop.volume) {
+      customLoop.setVolume(event.target.valueAsNumber)
+    }
+  } else if (!$('.play-btn').hasClass('play')) {
+    kits[loop].setVolume(event.target.valueAsNumber)
+    // kits.loop2.setDetune(event.target.valueAsNumber)
+    // kits.loop3.setDetune(event.target.valueAsNumber)
   }
-  kits.loop1.setVolume(event.target.valueAsNumber)
-  kits.loop2.setVolume(event.target.valueAsNumber)
-  kits.loop3.setVolume(event.target.valueAsNumber)
+
   state.volume = event.target.valueAsNumber
+  console.log('state', state)
   producers.forEach(x => {
     kitState[x].loop1.volume = (event.target.valueAsNumber)
     kitState[x].loop2.volume = (event.target.valueAsNumber)
@@ -540,18 +545,19 @@ const onChangeVolume = event => {
 //   kits.PointPoint.loop.setRate(event.target.valueAsNumber)
 //   console.log('event', event.target.valueAsNumber)
 // }
-const loops = ['loop1', 'loop2', 'loop3']
+// const loops = ['loop1', 'loop2', 'loop3']
 
 const onChangeDetune = event => {
   if (producer === 'Custom') {
     if (customLoop.detune) {
       customLoop.setDetune(event.target.valueAsNumber)
     }
-  } else {
-    kits.loop1.setDetune(event.target.valueAsNumber)
-    kits.loop2.setDetune(event.target.valueAsNumber)
-    kits.loop3.setDetune(event.target.valueAsNumber)
+  } else if (!$('.play-btn').hasClass('play')) {
+    kits[loop].setDetune(event.target.valueAsNumber)
+    // kits.loop2.setDetune(event.target.valueAsNumber)
+    // kits.loop3.setDetune(event.target.valueAsNumber)
   }
+
   state.detune = event.target.valueAsNumber
   console.log('state', state)
   producers.forEach(x => {
@@ -726,6 +732,7 @@ const indexAndShowUploads = () => {
         }
       )
     })
+    // .then(() => $('.loader').hide())
     .then(() => console.log('after index, customLoop is', customLoop))
     .catch(console.log)
 }
@@ -832,6 +839,13 @@ const addHandlers = () => {
   $('#j').on('click', () => kits.j.play())
   $('#k').on('click', () => kits.k.play())
   $('#l').on('click', () => kits.l.play())
+
+  $('#mobile-s').on('click', () => kits.s.play())
+  $('#mobile-d').on('click', () => kits.d.play())
+  $('#mobile-f').on('click', () => kits.f.play())
+  $('#mobile-j').on('click', () => kits.j.play())
+  $('#mobile-k').on('click', () => kits.k.play())
+  $('#mobile-l').on('click', () => kits.l.play())
 
   $('#s-oneShot-uploader').on('submit', event => uploadOneShot('s', event))
   $('#d-oneShot-uploader').on('submit', event => uploadOneShot('d', event))

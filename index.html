@@ -54,20 +54,22 @@
             </div>
             <div id="handlebar-uploads" class="block center-div">
             </div>
-            <div class="block range">
-              <label for="volume">Volume</label>
-              <input class="custom-range" type="range" id="volume" name="volume"
-                     value="0.5" min="0" max="1" step="0.1">
-            </div>
-            <!-- <div class="block">
-              <label for="rate">Speed</label>
-              <input type="range" id="rate" name="rate"
-                     value="1" min="0.5" max="2" step="0.1">
-            </div> -->
-            <div class="block range">
-              <label for="detune">Speed</label>
-              <input class="custom-range" type="range" id="detune" name="detune"
-                     value="0" min="-600" max="600" step="25">
+            <div class="sliders">
+              <div class="block range">
+                <label for="volume">Volume</label>
+                <input class="custom-range" type="range" id="volume" name="volume"
+                       value="0.5" min="0" max="1" step="0.1">
+              </div>
+              <!-- <div class="block">
+                <label for="rate">Speed</label>
+                <input type="range" id="rate" name="rate"
+                       value="1" min="0.5" max="2" step="0.1">
+              </div> -->
+              <div class="block range">
+                <label for="detune">Speed</label>
+                <input class="custom-range" type="range" id="detune" name="detune"
+                       value="0" min="-600" max="600" step="25">
+              </div>
             </div>
             <div class="block center-div">
               <button class="play-btn play">Play</button>
@@ -138,7 +140,6 @@
                 </div>
               </div>
             </div>
-
             <div class="key-container">
               <div class="key-row">
                 <div class="key-div">
@@ -174,7 +175,31 @@
                 </div>
               </div>
             </div>
-            <div class="upload-div block">
+            <div class="center-div">
+              <div class="mobile-key-container disappear">
+                <div class="mobile-row mobile-controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#s-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#d-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#f-modal" alt="button controls">
+                </div>
+                <div class="mobile-row mobile-keys">
+                  <img id="mobile-s" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-d" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-f" class="key" src='public/Key3.png' alt="key"/>
+                </div>
+                <div class="mobile-row mobile-controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#j-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#k-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#l-modal" alt="button controls">
+                </div>
+                <div class="mobile-row mobile-keys">
+                  <img id="mobile-j" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-k" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-l" class="key" src='public/Key3.png' alt="key"/>
+                </div>
+              </div>
+            </div>
+            <div class="upload-div block center-div">
               <form enctype="multipart/form-data" id="sound-uploader">
                 <input id="file" name="file" type="file" class="file-upload input-width"/>
                 <label for="file" class="upload-label">Upload Loop</label>

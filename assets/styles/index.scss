@@ -48,6 +48,10 @@ p {
   margin: 0;
 }
 
+.mobile-key-container {
+  display: none;
+}
+
 .nav-title {
   font-family: megrim, fantasy;
   color: white;
@@ -75,7 +79,7 @@ p {
   text-align: center;
 }
 
-.select, #sound-uploader, .input  {
+.select, #sound-uploader, .input {
   margin: 0 0 1.5em;
   height: 2.5em;
   width: 300px;
@@ -187,7 +191,6 @@ p {
   width: 100px;
   height: auto;
   margin: 0 5px;
-  z-index: 4;
   // filter: sepia(75%);
 }
 
@@ -319,6 +322,7 @@ label {
   height: 65px;
   width: 65px;
   transition: .3s;
+  z-index: 10;
 }
 
 .button-options:hover {
@@ -398,21 +402,66 @@ label {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-left {
-    width: 140px;
+@media only screen and (max-width: 990px) {
+  .key {
+    height: 66px;
+    width: 66px;
   }
-  .producer {
+  .letter {
     font-size: 16px;
   }
+  .button-options {
+    margin: 0 5px -32px;
+  }
+}
+
+@media screen and ( min-width: 600px ) and ( min-height: 1024px ) {
+  main, .nav-left {
+    height: 1366px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
   .key {
-    width: 50px;
+    height: 48px;
+    width: 48px;
+  }
+  .button-options {
+    height: 48px;
+    width: 48px;
+    margin: 0 5px -32px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .nav-left {
+    width: 140px;
+    height: 812px;
+  }
+  .producer, label {
+    font-size: 14px;
+  }
+  .sliders {
+    width: 180px;
+    margin: 0 auto;
+  }
+  // .range {
+  //   display: flex;
+  //   justify-content: center;
+  // }
+  .key {
+    width: 65px;
+    height: 65px;
   }
   #producer-title {
     font-size: 20px;
   }
   main {
     margin-left: 140px;
+    height: 812px;
+  }
+  .custom-select {
+    width: 200px;
   }
   .letter {
     display: none;
@@ -422,55 +471,67 @@ label {
     margin: 10px;
   }
   .key-container {
-    // display: block;
-    margin-top: 10px;
+    display: none;
+    // margin-top: 10px;
   }
-
+  .hamburger-container {
+    display: none;
+  }
+  .mobile-key-container {
+    display: block;
+  }
+  .mobile-keys {
+    filter: hue-rotate(120deg);
+      -webkit-filter: hue-rotate(120deg);
+  }
+  .button-options {
+    width: 65px;
+    height: 65px;
+    margin: 0 5px;
+  }
+  .mobile-row {
+    display: flex;
+    justify-content: center;
+  }
   .slider-container {
     width: 150px;
   }
   .slider-label {
     width: 50px;
   }
-
   .range {
     display: block;
     width: 100px;
   }
-
   .block {
     width: 100px;
     margin: 0;
   }
-
   .custom-range {
     width: 175px;
   }
-
   .player {
     width: auto;
     margin: 0 1em;
   }
-
   .center-div {
     margin: 0 auto;
   }
-
   .select {
     background-color: white;
     margin: 5px;
   }
-
   .key-row {
     display: block;
   }
-
   .upload-div {
     width: 200px;
   }
-
   .input-width, .upload-label, .submit-btn, #sound-uploader {
     width: 200px;
+  }
+  .player {
+    padding: 1em 0;
   }
 }
 
