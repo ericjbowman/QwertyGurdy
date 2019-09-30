@@ -500,7 +500,7 @@ const stop = () => {
 }
 
 const onkeyDown = event => {
-  $(`#${event.keyCode}`).addClass('key-pressed')
+  $(`.${event.keyCode}`).addClass('key-pressed')
   switch (event.keyCode) {
     case 83 : kits.s.stop()
       kits.s.play()
@@ -524,7 +524,7 @@ const onkeyDown = event => {
 }
 
 const onkeyUp = event => {
-  $(`#${event.keyCode}`).removeClass('key-pressed')
+  $(`.${event.keyCode}`).removeClass('key-pressed')
 }
 
 const onChangeVolume = event => {
