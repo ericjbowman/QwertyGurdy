@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>qwerty gurdy</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="//use.edgefonts.net/belgrano;megrim.js"></script>
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <!-- <div> -->
+        <nav class="navbar">
+          <div class="nav-content">
+            <h1 class="nav-title">qwerty gurdy</h1>
+          </div>
+        </nav>
+        <div class="nav-left">
+          <div id="Mr-Bill" class="producer-div">
+            <p id="Mr-Bill-text" class="producer selected">Mr. Bill</p>
+          </div>
+          <div id="Oliver" class="producer-div">
+            <p id="Oliver-text" class="producer">Oliver</p>
+          </div>
+          <div id="Pascaal" class="producer-div">
+            <p id="Pascaal-text" class="producer">Pascaal</p>
+          </div>
+          <!-- <div id="PointPoint" class="producer-div">
+            <p id="PointPoint-text" class="producer">Point Point</p>
+          </div> -->
+          <div id="Tennyson" class="producer-div">
+            <p id="Tennyson-text" class="producer">Tennyson</p>
+          </div>
+          <div id="Torres-Rengifo" class="producer-div">
+            <p id="Torres-Rengifo-text" class="producer">Torres/Rengifo</p>
+          </div>
+          <div id="Custom" class="producer-div">
+            <p id="Custom-text" class="producer">Custom</p>
+          </div>
+        </div>
+        <main>
+          <div class="player">
+            <h2 id="producer-title">Mr. Bill Samples</h2>
+            <div id="presets" class="block center-div">
+              <select class="loops select">
+                <option class="option" value="Loop 1">Loop 1</option>
+                <option class="option" value="Loop 2">Loop 2</option>
+                <option class="option" value="Loop 3">Loop 3</option>
+              </select>
+            </div>
+            <div id="handlebar-uploads" class="block center-div">
+            </div>
+            <div class="sliders">
+              <div class="block range">
+                <label for="volume">Volume</label>
+                <input class="custom-range" type="range" id="volume" name="volume"
+                       value="0.5" min="0" max="1" step="0.1">
+              </div>
+              <!-- <div class="block">
+                <label for="rate">Speed</label>
+                <input type="range" id="rate" name="rate"
+                       value="1" min="0.5" max="2" step="0.1">
+              </div> -->
+              <div class="block range">
+                <label for="detune">Speed</label>
+                <input class="custom-range" type="range" id="detune" name="detune"
+                       value="0" min="-600" max="600" step="25">
+              </div>
+            </div>
+            <div class="block center-div">
+              <button class="play-btn play">Play</button>
+            </div>
+              <!-- <div class="block">
+                <button class="stop-btn">Stop</button>
+              </div> -->
+            <div class="slider-container">
+              <div class="block">
+                <!-- <input
+                  id="typeinp"
+                  type="range"
+                  min="0" max="1"
+                  value={this.state.pointLoop.volume}
+                  onChange={setVolume}
+                  name="pointLoop"
+                  step="0.1"/>
+              </div>
+              <div class="block">
+                <div class="slider-label">
+                  <span>Speed</span>
+                </div>
+                <input
+                  id="pointLoopSpeed"
+                  type="range"
+                  min="0.3" max="2"
+                  value={this.state.pointLoop.rate}
+                  onChange={setRate}
+                  name="pointLoop"
+                  step="0.1"/>
+              </div>
+              <div class="block">
+                <div class="slider-label">
+                  <span>Pitch</span>
+                </div>
+                <input
+                  id="pointLoopPitch"
+                  type="range"
+                  min="0.3" max="2"
+                  value={this.state.pointLoop.pitch}
+                  onChange={setRate}
+                  name="pointLoop"
+                  step="0.1"/> -->
+              </div>
+            </div>
+            <!-- <img class="button-options" src="public/Hamburger.png" alt="button menu"> -->
+            <div class="hamburger-container">
+              <div class="key-row">
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#s-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#d-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#f-modal" alt="button controls">
+                </div>
+              </div>
+              <div class="key-row">
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#j-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#k-modal" alt="button controls">
+                </div>
+                <div class="key-div">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#l-modal" alt="button controls">
+                </div>
+              </div>
+            </div>
+            <div class="key-container">
+              <div class="key-row">
+                <div class="key-div">
+                  <span class="letter">S</span>
+                  <img id="s" class="key 83" src='public/Key3.png' alt="D"/>
+                </div>
+                <div class="key-div">
+                  <span class="letter">D</span>
+                  <img id="d" class="key 68" src='public/Key3.png' alt="F"/>
+                </div>
+                <div class="key-div">
+                  <span class="letter">F</span>
+                  <img id="f" class="key 70" src='public/Key3.png' alt="G"/>
+                </div>
+              </div>
+              <div class="loader">
+                <div class="outer"></div>
+                <div class="middle"></div>
+                <div class="inner"></div>
+              </div>
+              <div class="key-row">
+                <div class="key-div">
+                  <span class="letter">J</span>
+                  <img id="j" class="key 74" src='public/Key3.png' alt="H"/>
+                </div>
+                <div class="key-div">
+                  <span class="letter">K</span>
+                  <img id="k" class="key 75" src='public/Key3.png' alt="J"/>
+                </div>
+                <div class="key-div">
+                  <span class="letter">L</span>
+                  <img id="l" class="key 76" src='public/Key3.png' alt="K"/>
+                </div>
+              </div>
+            </div>
+            <div class="center-div">
+              <div class="mobile-key-container disappear">
+                <div class="mobile-row mobile-controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#s-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#d-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#f-modal" alt="button controls">
+                </div>
+                <div class="mobile-row mobile-keys">
+                  <img id="mobile-s" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-d" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-f" class="key" src='public/Key3.png' alt="key"/>
+                </div>
+                <div class="mobile-row mobile-controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#j-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#k-modal" alt="button controls">
+                  <img class="button-options" src="public/Controls4.png" data-toggle="modal" data-target="#l-modal" alt="button controls">
+                </div>
+                <div class="mobile-row mobile-keys">
+                  <img id="mobile-j" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-k" class="key" src='public/Key3.png' alt="key"/>
+                  <img id="mobile-l" class="key" src='public/Key3.png' alt="key"/>
+                </div>
+              </div>
+            </div>
+            <div class="upload-div block center-div">
+              <form enctype="multipart/form-data" id="sound-uploader">
+                <input id="file" name="file" type="file" class="file-upload input-width"/>
+                <label for="file" class="upload-label">Upload Loop</label>
+                <input name="title" placeholder="Loop Name" class="input input-width" type="text" required/>
+                <input type="submit" class="submit-btn"/>
+              </form>
+            </div>
+          </div>
+          <!-- Modals -->
+          <!-- S Modal -->
+          <div class="modal fade" id="s-modal" tabindex="-1" role="dialog" aria-labelledby="sModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sModalLabel">"S" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="s-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="s-volume" name="s-volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="s-detune" name="s-detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="s-reverb" name="s-reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="s-filter-type" name="s-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="s-filter-type" name="s-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="s-filter" name="s-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="s-oneShot-uploader">
+                      <input id="s-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="s-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- D modal -->
+          <div class="modal fade" id="d-modal" tabindex="-1" role="dialog" aria-labelledby="dModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="dModalLabel">"D" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="d-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="d-volume" name="d-volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="d-detune" name="d-detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="d-reverb" name="d-reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="d-filter-type" name="d-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="d-filter-type" name="d-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="d-filter" name="d-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="d-oneShot-uploader">
+                      <input id="d-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="d-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- F Modal -->
+          <div class="modal fade" id="f-modal" tabindex="-1" role="dialog" aria-labelledby="fModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="fModalLabel">"F" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="f-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="f-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="f-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="f-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="f-filter-type" name="f-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="f-filter-type" name="f-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="f-filter" name="f-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="f-oneShot-uploader">
+                      <input id="f-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="f-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- J Modal -->
+          <div class="modal fade" id="j-modal" tabindex="-1" role="dialog" aria-labelledby="jModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="jModalLabel">"J" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="j-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="j-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="j-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="j-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="j-filter-type" name="j-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="j-filter-type" name="j-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="j-filter" name="j-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="j-oneShot-uploader">
+                      <input id="j-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="j-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- K Modal -->
+          <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="kModalLabel">"K" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="k-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="k-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="k-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="k-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="k-filter-type" name="k-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="k-filter-type" name="k-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="k-filter" name="k-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="k-oneShot-uploader">
+                      <input id="k-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="k-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- L Modal -->
+          <div class="modal fade" id="l-modal" tabindex="-1" role="dialog" aria-labelledby="lModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="lModalLabel">"L" Key Parameters</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="l-handlebar-oneShots" class="handlebar-oneShots block center-div">
+                  </div>
+                  <div class="block range">
+                    <label for="volume">Volume</label>
+                    <input class="custom-range" type="range" id="l-volume" name="volume"
+                           value="0.5" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <label for="detune">Pitch</label>
+                    <input class="custom-range" type="range" id="l-detune" name="detune"
+                           value="0" min="-600" max="600" step="25">
+                  </div>
+                  <div class="block range">
+                    <label for="reverb">Reverb</label>
+                    <input class="custom-range" type="range" id="l-reverb" name="reverb"
+                           value="0" min="0" max="1" step="0.1">
+                  </div>
+                  <div class="block range">
+                    <div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">Low Pass</label>
+                        <input type="radio" class="l-filter-type" name="l-filter-type" value="lowpass" checked>
+                      </div>
+                      <div class="radio">
+                        <label for="lowpass" class="filter-label">High Pass</label>
+                        <input type="radio" class="l-filter-type" name="l-filter-type" value="highpass">
+                      </div>
+                      <div class="block range">
+                        <label for="filter">Frequency</label>
+                        <input class="custom-range" type="range" id="l-filter" name="l-filter"
+                               value="20000" min="0" max="20000" step="50">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oneShot-div block handlebar-oneShots">
+                    <form enctype="multipart/form-data" id="l-oneShot-uploader">
+                      <input id="l-oneShot" name="file" type="file" class="file-upload input-width"/>
+                      <div class="flex-center">
+                        <label for="l-oneShot" class="upload-label modal-input">Upload Sample</label>
+                      </div>
+                      <div class="flex-center">
+                        <input name="title" placeholder="Sample Name" class="input input-width modal-input" type="text" required/>
+                      </div>
+                      <div class="flex-center">
+                        <input type="submit" class="submit-btn modal-input"/>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+                <div class="modal-loader">
+                  <div class="outer"></div>
+                  <div class="middle"></div>
+                  <div class="inner"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Message to mobile users -->
+          <div class="modal fade" id="mobile-modal" tabindex="-1" role="dialog" aria-labelledby="mobileModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="mobile-modal-content modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sModalLabel">Warning!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Qwerty Gurdy is intended to be used on a computer. Some features may not work on mobile devices.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Failure message -->
+          <div class="modal fade" id="failure-modal" tabindex="-1" role="dialog" aria-labelledby="mobileModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="mobile-modal-content modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title center-text" id="sModalLabel">Warning!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <h5 class="center-text">Failed to pload your sample</h5>
+                  <hr>
+                    <p class="center-text">Make sure it's an audio file and don't forget to give it a title</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      <!-- </div> -->
+    </body>
+</html>
