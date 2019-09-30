@@ -1,4 +1,7 @@
 <select class="custom-select oneShot-select select">
+  {{#each oneShots as |oneShot|}}
+    <option class="option" value={{oneShot.url}}>{{oneShot.title}}</option>
+  {{/each}}
   <option value="https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick1.wav">Mr. Bill Kick 1</option>
   <option value="https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillKick2.wav">Mr. Bill Kick 2</option>
   <option value="https://bowmansbucket.s3.amazonaws.com/MrBill/MrBillPerc2.wav">Mr. Bill Tom</option>
@@ -46,8 +49,4 @@
   <option value="https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc1.wav">Torres-Rengifo Perc 1</option>
   <option value="https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoPerc2.wav">Torres-Rengifo Perc 2</option>
   <option value="https://bowmansbucket.s3.amazonaws.com/Torres-Rengifo/Torres-RengifoRim1.wav">Torres-Rengifo Rim 1</option>
-
-  {{#each oneShots as |oneShot|}}
-    <option class="option" value={{oneShot.url}}>{{oneShot.title}}</option>
-  {{/each}}
 </select>
