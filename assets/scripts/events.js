@@ -791,7 +791,7 @@ const uploadOneShot = (key, event) => {
     .then(() => $('.modal-loader').hide())
     .catch(() => {
       $('#failure-modal').modal('show')
-      $('.loader').hide()
+      $('.modal-loader').hide()
     })
 }
 
