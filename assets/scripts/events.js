@@ -424,7 +424,7 @@ const kitState = {
           }
       },
     k:
-      { source: `https://bowmansbucket.s3.amazonaws.com/503562328715875`,
+      { source: `https://bowmansbucket.s3.amazonaws.com/9507814444897231`,
         volume: 0.5,
         filter:
           { type: 'lowpass',
@@ -659,6 +659,7 @@ const setCustomOneShot = (key, url) => {
   kits[key] = new Wad(Object.assign(kitState[producer][key], { source: url })
   )
   kitState[producer][key].source = url
+  console.log('New sound url:', url)
 }
 
 const onSelectCustomOneShot = (key, event) => {
@@ -788,7 +789,10 @@ const uploadOneShot = (key, event) => {
     })
     .then(() => indexAndShowOneShots(key))
     .then(() => $('.modal-loader').hide())
-    .catch(() => alert('failure'))
+    .catch(() => {
+      $('#failure-modal').modal('show')
+      $('.loader').hide()
+    })
 }
 
 const detectmob = () => {
@@ -882,7 +886,10 @@ const addHandlers = () => {
       .then(indexAndShowUploads)
       .then(() => onClickProducer('Custom'))
       .then(() => $('.loader').hide())
-      .catch(() => alert('failure'))
+      .catch(() => {
+        $('#failure-modal').modal('show')
+        $('.loader').hide()
+      })
   })
   window.addEventListener('keydown', onkeyDown)
   window.addEventListener('keyup', onkeyUp)
