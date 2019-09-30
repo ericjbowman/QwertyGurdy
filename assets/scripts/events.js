@@ -502,17 +502,23 @@ const stop = () => {
 const onkeyDown = event => {
   $(`#${event.keyCode}`).addClass('key-pressed')
   switch (event.keyCode) {
-    case 83 : kits.s.play()
+    case 83 : kits.s.stop()
+      kits.s.play()
       break
-    case 68 : kits.d.play()
+    case 68 : kits.d.stop()
+      kits.d.play()
       break
-    case 70 : kits.f.play()
+    case 70 : kits.f.stop()
+      kits.f.play()
       break
-    case 74 : kits.j.play()
+    case 74 : kits.j.stop()
+      kits.j.play()
       break
-    case 75 : kits.k.play()
+    case 75 : kits.k.stop()
+      kits.k.play()
       break
-    case 76 : kits.l.play()
+    case 76 : kits.l.stop()
+      kits.l.play()
       break
   }
 }
@@ -522,10 +528,8 @@ const onkeyUp = event => {
 }
 
 const onChangeVolume = event => {
-  if (producer === 'Custom') {
-    if (customLoop.volume) {
-      customLoop.setVolume(event.target.valueAsNumber)
-    }
+  if (producer === 'Custom' && !$('.play-btn').hasClass('play')) {
+    customLoop.setVolume(event.target.valueAsNumber)
   } else if (!$('.play-btn').hasClass('play')) {
     kits[loop].setVolume(event.target.valueAsNumber)
     // kits.loop2.setDetune(event.target.valueAsNumber)
@@ -533,7 +537,6 @@ const onChangeVolume = event => {
   }
 
   state.volume = event.target.valueAsNumber
-  console.log('state', state)
   producers.forEach(x => {
     kitState[x].loop1.volume = (event.target.valueAsNumber)
     kitState[x].loop2.volume = (event.target.valueAsNumber)
@@ -548,10 +551,8 @@ const onChangeVolume = event => {
 // const loops = ['loop1', 'loop2', 'loop3']
 
 const onChangeDetune = event => {
-  if (producer === 'Custom') {
-    if (customLoop.detune) {
-      customLoop.setDetune(event.target.valueAsNumber)
-    }
+  if (producer === 'Custom' && !$('.play-btn').hasClass('play')) {
+    customLoop.setDetune(event.target.valueAsNumber)
   } else if (!$('.play-btn').hasClass('play')) {
     kits[loop].setDetune(event.target.valueAsNumber)
     // kits.loop2.setDetune(event.target.valueAsNumber)
@@ -733,7 +734,7 @@ const indexAndShowUploads = () => {
       )
     })
     // .then(() => $('.loader').hide())
-    .then(() => console.log('after index, customLoop is', customLoop))
+    // .then(() => console.log('after index, customLoop is', customLoop))
     .catch(console.log)
 }
 
