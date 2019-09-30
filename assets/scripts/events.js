@@ -544,12 +544,6 @@ const onChangeVolume = event => {
   })
 }
 
-// const onChangeRate = event => {
-//   kits.PointPoint.loop.setRate(event.target.valueAsNumber)
-//   console.log('event', event.target.valueAsNumber)
-// }
-// const loops = ['loop1', 'loop2', 'loop3']
-
 const onChangeDetune = event => {
   if (producer === 'Custom' && !$('.play-btn').hasClass('play')) {
     customLoop.setDetune(event.target.valueAsNumber)
@@ -560,7 +554,6 @@ const onChangeDetune = event => {
   }
 
   state.detune = event.target.valueAsNumber
-  console.log('state', state)
   producers.forEach(x => {
     kitState[x].loop1.detune = (event.target.valueAsNumber)
     kitState[x].loop2.detune = (event.target.valueAsNumber)
@@ -666,7 +659,6 @@ const setCustomOneShot = (key, url) => {
   kits[key] = new Wad(Object.assign(kitState[producer][key], { source: url })
   )
   kitState[producer][key].source = url
-  console.log('custom oneShot', kitState[producer][key].source)
 }
 
 const onSelectCustomOneShot = (key, event) => {
