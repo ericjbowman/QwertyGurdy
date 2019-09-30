@@ -896,12 +896,36 @@ const addHandlers = () => {
 
   api.indexOneShots()
     .then((responseData) => {
-      $('#s-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.reverse() }))
-      $('#d-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
-      $('#f-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
-      $('#j-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
-      $('#k-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
-      $('#l-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots }))
+      $('#s-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/48025856512341325').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/48025856512341325',
+          title: 'Inception'
+        }
+      ).reverse() }))
+      $('#d-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/2851370962708084').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/2851370962708084',
+          title: 'Wilhelm Scream'
+        }
+      ).reverse() }))
+      $('#f-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/11095957366424303').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/11095957366424303',
+          title: 'Photay Buchla Splash'
+        }
+      ).reverse() }))
+      $('#j-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/6454482876346834').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/6454482876346834',
+          title: 'Bass Drop'
+        }
+      ).reverse() }))
+      $('#k-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/9507814444897231').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/9507814444897231',
+          title: `"Okay"`
+        }
+      ).reverse() }))
+      $('#l-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/1682637573742103').concat(
+        { url: 'https://bowmansbucket.s3.amazonaws.com/1682637573742103',
+          title: 'Hawk'
+        }
+      ).reverse() }))
       return responseData
     })
     .then((responseData) => {
