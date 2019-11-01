@@ -30,6 +30,33 @@ const state = {
 let producer = 'Mr-Bill'
 const producers = ['Mr-Bill', 'Oliver', 'Pascaal', 'Tennyson', 'Torres-Rengifo', 'Custom']
 
+const defaultCustomLoops = {
+  's':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/48025856512341325',
+    title: 'Inception'
+  },
+  'd':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/2851370962708084',
+    title: 'Wilhelm Scream'
+  },
+  'f':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/11095957366424303',
+    title: 'Photay Buchla Splash'
+  },
+  'j':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/6454482876346834',
+    title: 'Bass Drop'
+  },
+  'k':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/9507814444897231',
+    title: `"Okay"`
+  },
+  'l':
+  { url: 'https://bowmansbucket.s3.amazonaws.com/1682637573742103',
+    title: 'Hawk'
+  }
+}
+
 const kitState = {
   'Mr-Bill': {
     loop1:
@@ -532,8 +559,6 @@ const onChangeVolume = event => {
     customLoop.setVolume(event.target.valueAsNumber)
   } else if (!$('.play-btn').hasClass('play')) {
     kits[loop].setVolume(event.target.valueAsNumber)
-    // kits.loop2.setDetune(event.target.valueAsNumber)
-    // kits.loop3.setDetune(event.target.valueAsNumber)
   }
 
   state.volume = event.target.valueAsNumber
@@ -549,8 +574,6 @@ const onChangeDetune = event => {
     customLoop.setDetune(event.target.valueAsNumber)
   } else if (!$('.play-btn').hasClass('play')) {
     kits[loop].setDetune(event.target.valueAsNumber)
-    // kits.loop2.setDetune(event.target.valueAsNumber)
-    // kits.loop3.setDetune(event.target.valueAsNumber)
   }
 
   state.detune = event.target.valueAsNumber
@@ -757,6 +780,7 @@ const indexAndShowOneShots = key => {
       store.oneShots = responseData.oneShots
       return responseData
     })
+    // .then(responseData => refreshList(responseData))
     .then(() => { state.oneShotUrl = store.oneShots[0].url })
     .catch(console.log)
 }
@@ -796,13 +820,13 @@ const uploadOneShot = (key, event) => {
 }
 
 const detectmob = () => {
-  if (navigator.userAgent.match(/Android/i)
-  || navigator.userAgent.match(/webOS/i)
-  || navigator.userAgent.match(/iPhone/i)
-  || navigator.userAgent.match(/iPad/i)
-  || navigator.userAgent.match(/iPod/i)
-  || navigator.userAgent.match(/BlackBerry/i)
-  || navigator.userAgent.match(/Windows Phone/i)
+  if (navigator.userAgent.match(/Android/i) ||
+  navigator.userAgent.match(/webOS/i) ||
+  navigator.userAgent.match(/iPhone/i) ||
+  navigator.userAgent.match(/iPad/i) ||
+  navigator.userAgent.match(/iPod/i) ||
+  navigator.userAgent.match(/BlackBerry/i) ||
+  navigator.userAgent.match(/Windows Phone/i)
   ) {
     return true
   } else {
@@ -897,34 +921,22 @@ const addHandlers = () => {
   api.indexOneShots()
     .then((responseData) => {
       $('#s-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/48025856512341325').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/48025856512341325',
-          title: 'Inception'
-        }
+        defaultCustomLoops.s
       ).reverse() }))
       $('#d-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/2851370962708084').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/2851370962708084',
-          title: 'Wilhelm Scream'
-        }
+        defaultCustomLoops.d
       ).reverse() }))
       $('#f-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/11095957366424303').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/11095957366424303',
-          title: 'Photay Buchla Splash'
-        }
+        defaultCustomLoops.f
       ).reverse() }))
       $('#j-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/6454482876346834').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/6454482876346834',
-          title: 'Bass Drop'
-        }
+        defaultCustomLoops.j
       ).reverse() }))
       $('#k-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/9507814444897231').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/9507814444897231',
-          title: `"Okay"`
-        }
+        defaultCustomLoops.k
       ).reverse() }))
       $('#l-handlebar-oneShots').html(indexOneShots({ oneShots: responseData.oneShots.filter(oneShot => oneShot.url !== 'https://bowmansbucket.s3.amazonaws.com/1682637573742103').concat(
-        { url: 'https://bowmansbucket.s3.amazonaws.com/1682637573742103',
-          title: 'Hawk'
-        }
+        defaultCustomLoops.l
       ).reverse() }))
       return responseData
     })
